@@ -1,0 +1,142 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fdd04a1ef84, pid=7976, tid=140587166066432
+#
+# JRE version: OpenJDK Runtime Environment (7.0_65-b32) (build 1.7.0_65-b32)
+# Java VM: OpenJDK 64-Bit Server VM (24.65-b04 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea 2.5.3
+# Distribution: Ubuntu 14.04 LTS, package 7u71-2.5.3-0ubuntu0.14.04.1
+# Problematic frame:
+# V  [libjvm.so+0x545f84]  STWGCTimer::register_gc_start(Ticks const&)+0x14
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions on how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fdcfc07a000):  VMThread [stack: 0x00007fdd0007e000,0x00007fdd0017f000] [id=7990]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007fdd052be260, RCX=0x0000000000000018, RDX=0x00000000000e4ce9
+RSP=0x00007fdd0017d6c0, RBP=0x00007fdd0017d6e0, RSI=0x00007fdd0017d970, RDI=0x00007fdd052be260
+R8 =0x0000000000000000, R9 =0x0000000000000001, R10=0x0000000054f02052, R11=0x0000000000000002
+R12=0x00007fdd052d2960, R13=0x00007fdcfc021420, R14=0x0000000000000004, R15=0x000000000000000a
+RIP=0x00007fdd04a1ef84, EFLAGS=0x0000000000010206, CSGSFS=0x0000000000000033, ERR=0x0000000000000006
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fdd0017d6c0)
+0x00007fdd0017d6c0:   0000000054f02052 00007fdcfc01cc80
+0x00007fdd0017d6d0:   00007fdd052d2960 00007fdcfc021420
+0x00007fdd0017d6e0:   00007fdd0017da70 00007fdd04d098dc
+0x00007fdd0017d6f0:   0000000027c00000 0000000012300000
+0x00007fdd0017d700:   00007fdd00000000 00007fdd0000000a
+0x00007fdd0017d710:   00007fdcfc01f7b0 00007fdcfc01cc80
+0x00007fdd0017d720:   0000000011f98010 00000000159e10b0
+0x00007fdd0017d730:   0000000012300000 00007fdcfc01f7b0
+0x00007fdd0017d740:   00000000000003d8 0000000011f00000
+0x00007fdd0017d750:   00007fdd0017d870 00007fdd0017d850
+0x00007fdd0017d760:   00007fdd0017d930 00007fdd0017d900
+0x00007fdd0017d770:   00007fdcfc02c868 00007fdcfc02c490
+0x00007fdd0017d780:   00007fdd052bc850 00007fdd052983f0
+0x00007fdd0017d790:   00007fdd052b436d 00007fdcfc079390
+0x00007fdd0017d7a0:   0000000000000000 00007fdcfc02c480
+0x00007fdd0017d7b0:   0000000000749214 00007fdcfc021a00
+0x00007fdd0017d7c0:   00007fdd052bd910 00007fdcfc01fa60
+0x00007fdd0017d7d0:   00007fdcfc021420 0000000afc01f7b0
+0x00007fdd0017d7e0:   00007fdd0017d970 00007fdcfc01faf0
+0x00007fdd0017d7f0:   0000000000000000 0000000000000000
+0x00007fdd0017d800:   0000000000000000 0000000000000000
+0x00007fdd0017d810:   00000000016290dd 00007fdcfc01fa60
+0x00007fdd0017d820:   00000000016295bf 00007fdd0017d970
+0x00007fdd0017d830:   000000000162a06d 00007fdcacbdb364
+0x00007fdd0017d840:   00007fdcfc01faf0 00007fdcfc021420
+0x00007fdd0017d850:   0101010101010100 000000000000000a
+0x00007fdd0017d860:   00007fdd052820f0 00007fdcfc0780b0
+0x00007fdd0017d870:   00007fdd0017d9b0 00007fdcacbd0100
+0x00007fdd0017d880:   0000000000000000 0000000000000000
+0x00007fdd0017d890:   00007fdd00006b9d 0000000000000000
+0x00007fdd0017d8a0:   00007fdd052be260 00000000016295c0
+0x00007fdd0017d8b0:   00007fdd04e84998 0000000000000000 
+
+Instructions: (pc=0x00007fdd04a1ef84)
+0x00007fdd04a1ef64:   68 01 00 00 41 8b 34 24 eb 9f 66 90 55 48 89 e5
+0x00007fdd04a1ef74:   41 55 41 54 53 48 89 fb 48 83 ec 08 48 8b 47 18
+0x00007fdd04a1ef84:   c7 00 00 00 00 00 c7 47 34 00 00 00 00 48 c7 47
+0x00007fdd04a1ef94:   38 00 00 00 00 48 c7 47 40 00 00 00 00 4c 8b 67 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00007fdd052be260: <offset 0xde5260> in /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so at 0x00007fdd044d9000
+RCX=0x0000000000000018 is an unknown value
+RDX=0x00000000000e4ce9 is an unknown value
+RSP=0x00007fdd0017d6c0 is an unknown value
+RBP=0x00007fdd0017d6e0 is an unknown value
+RSI=0x00007fdd0017d970 is an unknown value
+RDI=0x00007fdd052be260: <offset 0xde5260> in /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so at 0x00007fdd044d9000
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000001 is an unknown value
+R10=0x0000000054f02052 is an unknown value
+R11=0x0000000000000002 is an unknown value
+R12=0x00007fdd052d2960: <offset 0xdf9960> in /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so at 0x00007fdd044d9000
+R13=0x00007fdcfc021420 is an unknown value
+R14=0x0000000000000004 is an unknown value
+R15=0x000000000000000a is an unknown value
+
+
+Stack: [0x00007fdd0007e000,0x00007fdd0017f000],  sp=0x00007fdd0017d6c0,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x545f84]  STWGCTimer::register_gc_start(Ticks const&)+0x14
+V  [libjvm.so+0x8308dc]  PSScavenge::invoke_no_policy()+0x4c
+V  [libjvm.so+0x831e48]  PSScavenge::invoke()+0x38
+V  [libjvm.so+0x7e8823]  ParallelScavengeHeap::failed_mem_allocate(unsigned long)+0x63
+V  [libjvm.so+0x94a504]  VM_ParallelGCFailedAllocation::doit()+0x84
+V  [libjvm.so+0x94e9f7]  VM_Operation::evaluate()+0x47
+V  [libjvm.so+0x94d368]  VMThread::evaluate_operation(VM_Operation*)+0x318
+V  [libjvm.so+0x94d7c9]  VMThread::loop()+0x219
+V  [libjvm.so+0x94dc12]  VMThread::run()+0x72
+V  [libjvm.so+0x7c4ac2]  java_start(Thread*)+0xf2
+
+VM_Operation (0x00007fdcbbffdfe0): ParallelGCFailedAllocation, mode: safepoint, requested by thread 0x00007fdcfc4e9000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fdcc4005000 JavaThread "Thread-2" [_thread_blocked, id=8041, stack(0x00007fdcacadc000,0x00007fdcacbdd000)]
+  0x00007fdcc4004800 JavaThread "Thread-15" [_thread_blocked, id=8040, stack(0x00007fdcac7d9000,0x00007fdcac8da000)]
+  0x00007fdcc4002800 JavaThread "XToolkt-Shutdown-Thread" [_thread_blocked, id=8039, stack(0x00007fdcac8da000,0x00007fdcac9db000)]
+  0x00007fdcd8001000 JavaThread "SIGTERM handler" daemon [_thread_blocked, id=8037, stack(0x00007fdcf87f5000,0x00007fdcf88f6000)]
+  0x00007fdc88025000 JavaThread "pool-1-thread-1" [_thread_blocked, id=8036, stack(0x00007fdcac9db000,0x00007fdcacadc000)]
+  0x00007fdc9c006000 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=8034, stack(0x00007fdcacbdd000,0x00007fdcaccde000)]
+  0x00007fdcfc99b800 JavaThread "AWT-Shutdown" [_thread_blocked, id=8033, stack(0x00007fdcaccde000,0x00007fdcacddf000)]
+  0x00007fdcfc8fd800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=8032, stack(0x00007fdcad033000,0x00007fdcad134000)]
+  0x00007fdcfc8e2800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=8031, stack(0x00007fdcb8f10000,0x00007fdcb9011000)]
+  0x00007fdcfc51c000 JavaThread "Timer-0" daemon [_thread_blocked, id=8018, stack(0x00007fdcb9011000,0x00007fdcb9112000)]
+  0x00007fdcfc501800 JavaThread "dispatcher object source" daemon [_thread_blocked, id=8017, stack(0x00007fdcbbdfe000,0x00007fdcbbeff000)]
+  0x00007fdcfc4e9000 JavaThread "PulseAudio Eventloop Thread" daemon [_thread_blocked, id=8016, stack(0x00007fdcbbeff000,0x00007fdcbc000000)]
+  0x00007fdcfc0c3800 JavaThread "Service Thread" daemon [_thread_blocked, id=8003, stack(0x00007fdcf84f2000,0x00007fdcf85f3000)]
+  0x00007fdcfc0c1800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=8002, stack(0x00007fdcf85f3000,0x00007fdcf86f4000)]
+  0x00007fdcfc0be800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=8001, stack(0x00007fdcf86f4000,0x00007fdcf87f5000)]
+  0x00007fdcfc0bc000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=7996, stack(0x00007fdcf88f6000,0x00007fdcf89f7000)]
+  0x00007fdcfc0b8800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=7995, stack(0x00007fdcf89f7000,0x00007fdcf8af8000)]
+  0x00007fdcfc0aa800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7993, stack(0x00007fdcf8cfd000,0x00007fdcf8dfe000)]
+  0x00007fdcfc080800 JavaThread "Finalizer" daemon [_thread_blocked, id=7992, stack(0x00007fdcf8dfe000,0x00007fdcf8eff000)]
+  0x00007fdcfc07e800 JavaThread "Reference Handler" daemon [_thread_blocked, id=7991, stack(0x00007fdcf8eff000,0x00007fdcf9000000)]
+  0x00007fdcfc00e800 JavaThread "main" [_thread_blocked, id=7985, stack(0x00007fdd05fe6000,0x00007fdd060e7000)]
+
+Other Threads:
+=>0x00007fdcfc07a000 VMThread [stack: 0x00007fdd0007e000,0x00007fdd0017f000] [id=7990]
+  0x00007fdcfc0ce800 WatcherThread [stack: 0x00007fdcf83f1000,0x00007fdcf84f2000] [id=8004]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007fdcfc00afb0

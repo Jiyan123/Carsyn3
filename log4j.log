@@ -1,0 +1,2754 @@
+Setting up output stream...
+
+setting up file output to file file:////tmp/monitor.raw
+setting up speaker output
+opening speaker with buffer size 4096
+speaker actually has buffer size 4096
+output to speakers has started
+initializing Mary in compatibility mode MARY5INTERNAL
+Mary starting up...
+Specification version 5.2-SNAPSHOT
+Implementation version unknown
+Running on a Java 1.7.0_65 implementation by Oracle Corporation, on a Linux platform (amd64, 3.13.0-44-generic)
+MARY_BASE: .
+The installed/ folder does not exist.
+The conf/ folder does not exist.
+Full dump of system properties:
+awt.toolkit = sun.awt.X11.XToolkit
+file.encoding = UTF-8
+file.encoding.pkg = sun.io
+file.separator = /
+java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+java.awt.printerjob = sun.print.PSPrinterJob
+java.class.path = /home/jiyan/Programme/Proggen/Projekte/WS2/Carsynth/bin:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/bin:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/weka.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/drej.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/sphinx4/jsapi.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/Cocolab_DE_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/trident.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/snakeyaml-1.9.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/jrtp_1.0a.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/common-for-convenience/jflac-1.3.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/common-for-convenience/log4j-1.2.15.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/common-for-convenience/jdom1-1.1.1.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/WSJ_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/oaa2/antlr-oaa.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/oaa2/oaa2.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/io/rsb-0.10.0.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/io/venice-java.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/annotations-api.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/commons-daemon.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/bootstrap.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/catalina-ant.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/catalina-ha.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/catalina-tribes.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/catalina.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/ecj-4.3.1.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/el-api.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/jasper-el.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/jasper.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/json-simple-1.1.1.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/jsp-api.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/servlet-api.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/tomcat-api.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/tomcat-coyote.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/tomcat-dbcp.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/tomcat-i18n-es.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/tomcat-i18n-fr.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/tomcat-i18n-ja.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/tomcat-jdbc.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/tomcat-juli.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/tomcat-util.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/tomcat7-websocket.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/tomcat/websocket-api.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/javaFlacEncoder-0.3.1.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/mary5/marytts-client-5.2-SNAPSHOT-jar-with-dependencies.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/mary5/marytts-lang-de-5.2-SNAPSHOT.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/mary5/marytts-lang-en-5.2-SNAPSHOT.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/mary5/marytts-lang-es-5.2-SNAPSHOT.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/mary5/marytts-runtime-5.2-SNAPSHOT-jar-with-dependencies.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/mary5/voice-bits1-hsmm-5.1.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/oaa2/backport-util-concurrent.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/xmlrpc/xmlrpc-client-3.1.3.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/xmlrpc/xmlrpc-common-3.1.3.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/xmlrpc/xmlrpc-server-3.1.3.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/junit-4.10.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/common-for-convenience/jgraphx.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/sphinx4/sphinx4.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/common-for-convenience/commons-math3.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/xmlrpc/commons-logging-1.1.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/broker.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/inlg.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/srilmtbremake.jar:/home/jiyan/Downloads/inpro-inprotk-1cb167f43db9/lib/ws-commons-util-1.0.2.jar
+java.class.version = 51.0
+java.endorsed.dirs = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/endorsed
+java.ext.dirs = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+java.home = /usr/lib/jvm/java-7-openjdk-amd64/jre
+java.io.tmpdir = /tmp
+java.library.path = /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+java.runtime.name = OpenJDK Runtime Environment
+java.runtime.version = 1.7.0_65-b32
+java.specification.name = Java Platform API Specification
+java.specification.vendor = Oracle Corporation
+java.specification.version = 1.7
+java.vendor = Oracle Corporation
+java.vendor.url = http://java.oracle.com/
+java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+java.version = 1.7.0_65
+java.vm.info = mixed mode
+java.vm.name = OpenJDK 64-Bit Server VM
+java.vm.specification.name = Java Virtual Machine Specification
+java.vm.specification.vendor = Oracle Corporation
+java.vm.specification.version = 1.7
+java.vm.vendor = Oracle Corporation
+java.vm.version = 24.65-b04
+line.separator = 
+
+log4j.defaultInitOverride = true
+os.arch = amd64
+os.name = Linux
+os.version = 3.13.0-44-generic
+path.separator = :
+sun.arch.data.model = 64
+sun.awt.enableExtraMouseButtons = true
+sun.boot.class.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+sun.cpu.endian = little
+sun.cpu.isalist = 
+sun.font.fontmanager = sun.awt.X11FontManager
+sun.io.unicode.encoding = UnicodeLittle
+sun.java.command = carsynth.DecisionFrame
+sun.java.launcher = SUN_STANDARD
+sun.jnu.encoding = UTF-8
+sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level = unknown
+user.country = DE
+user.dir = /home/jiyan/Programme/Proggen/Projekte/WS2/Carsynth
+user.home = /home/jiyan
+user.language = de
+user.name = jiyan
+user.timezone = Europe/Berlin
+XML libraries used:
+DocumentBuilderFactory: class com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl
+TransformerFactory:     class com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl
+Now initiating mary module 'marytts.language.de.JTokeniser'
+Now initiating mary module 'marytts.language.de.Preprocess'
+Now initiating mary module 'marytts.modules.OpenNLPPosTagger(de,de.pos)'
+Now initiating mary module 'marytts.language.de.JPhonemiser'
+User dictionary './user-dictionaries/userdict-de.txt' for locale 'de' does not exist. Ignoring.
+Now initiating mary module 'marytts.language.de.Prosody'
+Now initiating mary module 'marytts.language.de.Postlex'
+Now initiating mary module 'marytts.modules.SimplePhoneme2AP(de)'
+Now initiating mary module 'marytts.language.en.JTokeniser'
+Now initiating mary module 'marytts.language.en.FreeTTSTokenToWords'
+Now initiating mary module 'marytts.modules.JPhonemiser(en_US.)'
+User dictionary './user-dictionaries/userdict-en_US.txt' for locale 'en_US' does not exist. Ignoring.
+Now initiating mary module 'marytts.modules.JPhonemiser(en_GB.)'
+User dictionary './user-dictionaries/userdict-en_GB.txt' for locale 'en_GB' does not exist. Ignoring.
+Now initiating mary module 'marytts.language.en.Prosody'
+Now initiating mary module 'marytts.modules.SimplePhoneme2AP(en_US)'
+Now initiating mary module 'marytts.language.en.Utt2XMLWordsEn'
+Now initiating mary module 'marytts.language.en.XML2UttTokensEn'
+Now initiating mary module 'marytts.language.en.PronunciationModel'
+Now initiating mary module 'marytts.modules.OpenNLPPosTagger(en,en.pos)'
+Now initiating mary module 'marytts.modules.JPhonemiser(es.)'
+User dictionary './user-dictionaries/userdict-es.txt' for locale 'es' does not exist. Ignoring.
+Now initiating mary module 'marytts.modules.MinimalisticPosTagger(es,es.)'
+Now initiating mary module 'marytts.modules.Synthesis'
+Now initiating mary module 'marytts.modules.TextToMaryXML'
+Now initiating mary module 'marytts.modules.SableParser'
+Now initiating mary module 'marytts.modules.SSMLParser'
+Now initiating mary module 'marytts.modules.APMLParser'
+Now initiating mary module 'marytts.modules.EmotionmlParser'
+Now initiating mary module 'marytts.modules.JTokeniser'
+Now initiating mary module 'marytts.modules.DummyTokens2Words'
+Now initiating mary module 'marytts.modules.ProsodyGeneric'
+Now initiating mary module 'marytts.modules.PronunciationModel'
+Now initiating mary module 'marytts.modules.TargetFeatureLister'
+Now initiating mary module 'marytts.modules.HalfPhoneTargetFeatureLister'
+Now initiating mary module 'marytts.modules.AcousticModeller'
+Now initiating mary module 'marytts.modules.RealisedAcoustparamsExtractor'
+Now initiating mary module 'marytts.modules.RealisedDurationsExtractor'
+Now initiating mary module 'inpro.synthesis.hts.InteractiveHTSEngine'
+Now initiating mary module 'marytts.modules.PraatTextGridGenerator'
+Module DummyTokens2Words converts TOKENS into WORDS (locale null, voice null)
+Module Prosody converts PHONEMES into INTONATION (locale null, voice null)
+Module PronunciationModel converts INTONATION into ALLOPHONES (locale null, voice null)
+Module AcousticModeller converts ALLOPHONES into ACOUSTPARAMS (locale null, voice null)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into TARGETFEATURES (locale null, voice null)
+Module HTSEngine converts TARGETFEATURES into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into HALFPHONE_TARGETFEATURES (locale null, voice null)
+Module PronunciationModel converts INTONATION into ALLOPHONES (locale null, voice null)
+Module AcousticModeller converts ALLOPHONES into ACOUSTPARAMS (locale null, voice null)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into TARGETFEATURES (locale null, voice null)
+Module HTSEngine converts TARGETFEATURES into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into HALFPHONE_TARGETFEATURES (locale null, voice null)
+Module AcousticModeller converts ALLOPHONES into ACOUSTPARAMS (locale null, voice null)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into TARGETFEATURES (locale null, voice null)
+Module HTSEngine converts TARGETFEATURES into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into HALFPHONE_TARGETFEATURES (locale null, voice null)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into TARGETFEATURES (locale null, voice null)
+Module HTSEngine converts TARGETFEATURES into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into HALFPHONE_TARGETFEATURES (locale null, voice null)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into TARGETFEATURES (locale null, voice null)
+Module HTSEngine converts TARGETFEATURES into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into HALFPHONE_TARGETFEATURES (locale null, voice null)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into TARGETFEATURES (locale null, voice null)
+Module HTSEngine converts TARGETFEATURES into AUDIO (locale null, voice null)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale null, voice null)
+Module Realised durations extractor converts AUDIO into REALISED_DURATIONS (locale null, voice null)
+Module Praat TextGrid generator converts AUDIO into PRAAT_TEXTGRID (locale null, voice null)
+Module TargetFeatureLister converts ACOUSTPARAMS into HALFPHONE_TARGETFEATURES (locale null, voice null)
+Module SSMLParser converts SSML into RAWMARYXML (locale null, voice null)
+Module JTokeniser converts RAWMARYXML into TOKENS (locale null, voice null)
+Module DummyTokens2Words converts TOKENS into WORDS (locale null, voice null)
+Module APMLParser converts APML into RAWMARYXML (locale null, voice null)
+Module JTokeniser converts RAWMARYXML into TOKENS (locale null, voice null)
+Module DummyTokens2Words converts TOKENS into WORDS (locale null, voice null)
+Module EmotionmlParser converts EMOTIONML into RAWMARYXML (locale null, voice null)
+Module JTokeniser converts RAWMARYXML into TOKENS (locale null, voice null)
+Module DummyTokens2Words converts TOKENS into WORDS (locale null, voice null)
+Module HTSEngine converts TARGETFEATURES into AUDIO (locale null, voice null)
+found path through modules
+Module started (RAWMARYXML->TOKENS, locale de).
+loading language resources for de from jtok/de
+Module started (TOKENS->WORDS, locale de).
+Module started (WORDS->PARTSOFSPEECH, locale de).
+Module started (PARTSOFSPEECH->PHONEMES, locale de).
+Module started (PHONEMES->INTONATION, locale de).
+Module started (INTONATION->ALLOPHONES, locale de).
+Building feature computer finished.
+Module started (SIMPLEPHONEMES->ACOUSTPARAMS, locale de).
+Module started (RAWMARYXML->TOKENS, locale en).
+loading language resources for en from jtok/en
+Module started (FREETTS_TOKENS->FREETTS_WORDS, locale en).
+Loading US English FreeTTS voices...
+done.
+Module started (PARTSOFSPEECH->PHONEMES, locale en_US).
+Module started (PARTSOFSPEECH->PHONEMES, locale en_GB).
+Module started (PHONEMES->INTONATION, locale en).
+Module started (SIMPLEPHONEMES->ACOUSTPARAMS, locale en_US).
+Module started (FREETTS_WORDS->WORDS, locale en).
+Loading US English FreeTTS voices...
+done.
+Module started (TOKENS->FREETTS_TOKENS, locale en).
+Loading US English FreeTTS voices...
+done.
+Module started (INTONATION->ALLOPHONES, locale en).
+Building feature computer finished.
+Module started (WORDS->PARTSOFSPEECH, locale en).
+Module started (PARTSOFSPEECH->PHONEMES, locale es).
+Module started (WORDS->PARTSOFSPEECH, locale es).
+Register UnitSelection voices:
+started.
+Module started (ACOUSTPARAMS->TARGETFEATURES, locale null).
+Module started (TARGETFEATURES->AUDIO, locale null).
+Voice 'bits1-hsmm'
+loading tricky phones
+  2 -->  de0
+  2: -->  de1
+  6 -->  de2
+  9 -->  de3
+  9~ -->  de4
+  ? -->  de5
+  @ -->  de6
+  D -->  de7
+  E -->  de8
+  E: -->  de9
+  I -->  de10
+  N -->  de11
+  O -->  de12
+  R -->  de13
+  S -->  de14
+  T -->  de15
+  U -->  de16
+  Y -->  de17
+  Z -->  de18
+  _ -->  de19
+  a: -->  de20
+  a~ -->  de21
+  e: -->  de22
+  e~ -->  de23
+  i: -->  de24
+  o: -->  de25
+  o~ -->  de26
+  tS -->  de27
+  u: -->  de28
+  y: -->  de29
+Loading Tree Set in CARTs:
+Loading duration tree...
+loadPdfs reading model of type dur
+loadPdfs: numPdf[state:0]=799
+loadStateTree: loaded CART contains 798 Decision nodes and 799 Leaf nodes.
+load: CART[0], total number of nodes in this CART: 1597
+Loading log F0 tree...
+loadPdfs reading model of type lf0
+loadPdfs: numPdf[state:0]=681
+loadPdfs: numPdf[state:1]=805
+loadPdfs: numPdf[state:2]=1375
+loadPdfs: numPdf[state:3]=849
+loadPdfs: numPdf[state:4]=638
+loadStateTree: loaded CART contains 680 Decision nodes and 681 Leaf nodes.
+load: CART[0], total number of nodes in this CART: 1361
+loadStateTree: loaded CART contains 804 Decision nodes and 805 Leaf nodes.
+load: CART[1], total number of nodes in this CART: 1609
+loadStateTree: loaded CART contains 1374 Decision nodes and 1375 Leaf nodes.
+load: CART[2], total number of nodes in this CART: 2749
+loadStateTree: loaded CART contains 848 Decision nodes and 849 Leaf nodes.
+load: CART[3], total number of nodes in this CART: 1697
+loadStateTree: loaded CART contains 637 Decision nodes and 638 Leaf nodes.
+load: CART[4], total number of nodes in this CART: 1275
+Loading GV Model Set:
+LoadGVModelSet reading model of type 'lf0' with gvWeight = 1.0
+Reached new initHMMData
+loading tricky phones
+  2 -->  de0
+  2: -->  de1
+  6 -->  de2
+  9 -->  de3
+  9~ -->  de4
+  ? -->  de5
+  @ -->  de6
+  D -->  de7
+  E -->  de8
+  E: -->  de9
+  I -->  de10
+  N -->  de11
+  O -->  de12
+  R -->  de13
+  S -->  de14
+  T -->  de15
+  U -->  de16
+  Y -->  de17
+  Z -->  de18
+  _ -->  de19
+  a: -->  de20
+  a~ -->  de21
+  e: -->  de22
+  e~ -->  de23
+  i: -->  de24
+  o: -->  de25
+  o~ -->  de26
+  tS -->  de27
+  u: -->  de28
+  y: -->  de29
+Loading Mixed Excitation Filters File:
+reading mixed excitation filters
+initMixedExcitation: loaded filter taps
+initMixedExcitation: numFilters = 5  orderFilters = 99
+Loading Tree Set in CARTs:
+Loading duration tree...
+loadPdfs reading model of type dur
+loadPdfs: numPdf[state:0]=799
+loadStateTree: loaded CART contains 798 Decision nodes and 799 Leaf nodes.
+load: CART[0], total number of nodes in this CART: 1597
+Loading log F0 tree...
+loadPdfs reading model of type lf0
+loadPdfs: numPdf[state:0]=681
+loadPdfs: numPdf[state:1]=805
+loadPdfs: numPdf[state:2]=1375
+loadPdfs: numPdf[state:3]=849
+loadPdfs: numPdf[state:4]=638
+loadStateTree: loaded CART contains 680 Decision nodes and 681 Leaf nodes.
+load: CART[0], total number of nodes in this CART: 1361
+loadStateTree: loaded CART contains 804 Decision nodes and 805 Leaf nodes.
+load: CART[1], total number of nodes in this CART: 1609
+loadStateTree: loaded CART contains 1374 Decision nodes and 1375 Leaf nodes.
+load: CART[2], total number of nodes in this CART: 2749
+loadStateTree: loaded CART contains 848 Decision nodes and 849 Leaf nodes.
+load: CART[3], total number of nodes in this CART: 1697
+loadStateTree: loaded CART contains 637 Decision nodes and 638 Leaf nodes.
+load: CART[4], total number of nodes in this CART: 1275
+Loading mgc tree...
+loadPdfs reading model of type mgc
+loadPdfs: numPdf[state:0]=351
+loadPdfs: numPdf[state:1]=335
+loadPdfs: numPdf[state:2]=346
+loadPdfs: numPdf[state:3]=339
+loadPdfs: numPdf[state:4]=374
+loadStateTree: loaded CART contains 350 Decision nodes and 351 Leaf nodes.
+load: CART[0], total number of nodes in this CART: 701
+loadStateTree: loaded CART contains 334 Decision nodes and 335 Leaf nodes.
+load: CART[1], total number of nodes in this CART: 669
+loadStateTree: loaded CART contains 345 Decision nodes and 346 Leaf nodes.
+load: CART[2], total number of nodes in this CART: 691
+loadStateTree: loaded CART contains 338 Decision nodes and 339 Leaf nodes.
+load: CART[3], total number of nodes in this CART: 677
+loadStateTree: loaded CART contains 373 Decision nodes and 374 Leaf nodes.
+load: CART[4], total number of nodes in this CART: 747
+Loading str tree...
+loadPdfs reading model of type str
+loadPdfs: numPdf[state:0]=218
+loadPdfs: numPdf[state:1]=206
+loadPdfs: numPdf[state:2]=133
+loadPdfs: numPdf[state:3]=140
+loadPdfs: numPdf[state:4]=235
+loadStateTree: loaded CART contains 217 Decision nodes and 218 Leaf nodes.
+load: CART[0], total number of nodes in this CART: 435
+loadStateTree: loaded CART contains 205 Decision nodes and 206 Leaf nodes.
+load: CART[1], total number of nodes in this CART: 411
+loadStateTree: loaded CART contains 132 Decision nodes and 133 Leaf nodes.
+load: CART[2], total number of nodes in this CART: 265
+loadStateTree: loaded CART contains 139 Decision nodes and 140 Leaf nodes.
+load: CART[3], total number of nodes in this CART: 279
+loadStateTree: loaded CART contains 234 Decision nodes and 235 Leaf nodes.
+load: CART[4], total number of nodes in this CART: 469
+Loading GV Model Set:
+LoadGVModelSet reading model of type 'mgc' with gvWeight = 1.0
+LoadGVModelSet reading model of type 'lf0' with gvWeight = 1.0
+LoadGVModelSet reading model of type 'str' with gvWeight = 1.0
+InitHMMData complete
+Registering voice `bits1-hsmm': female, locale de
+Allocating resources for voice default_name...
+... done.
+added freetts voice for mary voice bits1-hsmm
+New default voice for locale de: bits1-hsmm (desire 0)
+started.
+Module started (ACOUSTPARAMS->AUDIO, locale null).
+Module started (TEXT->RAWMARYXML, locale null).
+Module started (SABLE->RAWMARYXML, locale null).
+Module started (SSML->RAWMARYXML, locale null).
+Module started (APML->RAWMARYXML, locale null).
+Module started (EMOTIONML->RAWMARYXML, locale null).
+Module started (RAWMARYXML->TOKENS, locale null).
+loading language resources for en from jtok/en
+Module started (TOKENS->WORDS, locale null).
+Module started (PHONEMES->INTONATION, locale null).
+Module started (INTONATION->ALLOPHONES, locale null).
+Building feature computer finished.
+Module started (ACOUSTPARAMS->HALFPHONE_TARGETFEATURES, locale null).
+Module started (ALLOPHONES->ACOUSTPARAMS, locale null).
+Module started (AUDIO->REALISED_ACOUSTPARAMS, locale null).
+Module started (AUDIO->REALISED_DURATIONS, locale null).
+Module started (AUDIO->PRAAT_TEXTGRID, locale null).
+Startup times:
+OpenNLPPosTagger: 1494 ms
+OpenNLPPosTagger: 808 ms
+Synthesis: 743 ms
+SableParser: 649 ms
+SSMLParser: 142 ms
+APMLParser: 138 ms
+JTokeniser: 103 ms
+EmotionmlParser: 80 ms
+JTokeniser: 55 ms
+TokenToWords: 48 ms
+JPhonemiser_de: 37 ms
+JTokeniser: 23 ms
+Prosody: 19 ms
+Prosody: 11 ms
+Prosody: 5 ms
+TextToMaryXML: 3 ms
+SimplePhoneme2AP: 2 ms
+OpenNLPPosTagger: 2 ms
+SimplePhoneme2AP: 1 ms
+JPhonemiser: 1 ms
+Utt2XML WordsEn: 1 ms
+TargetFeatureLister: 1 ms
+Preprocess: 0 ms
+PronunciationModel: 0 ms
+JPhonemiser: 0 ms
+XML2Utt TokensEn: 0 ms
+PronunciationModel: 0 ms
+JPhonemiser: 0 ms
+DummyTokens2Words: 0 ms
+PronunciationModel: 0 ms
+AcousticModeller: 0 ms
+Realised acoustparams extractor: 0 ms
+Realised durations extractor: 0 ms
+Praat TextGrid generator: 0 ms
+Startup complete.
+Could not find default voice for locale en_US
+audioFormat is PCM_SIGNED 16000.0 Hz, 16 bit, mono, 2 bytes/frame, little-endian
+query is Nach links in
+New request (input type "TEXT", output type "REALISED_ACOUSTPARAMS", voice "bits1-hsmm", audio "WAVE")
+Setting text input: Nach links in
+Now converting the following input data from TEXT to RAWMARYXML:
+Writing Text output:
+Nach links in
+Determining which modules to use
+Module TextToMaryXML converts TEXT into RAWMARYXML (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- TextToMaryXML (marytts.modules.TextToMaryXML)
+Handing the following data to the next module:
+Writing Text output:
+Nach links in
+Next module: TextToMaryXML
+textNodeString=`Nach links in'
+Now splitting the following RAWMARYXML data into chunks:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+Nach links in
+</p>
+</maryxml>
+
+Now converting the following input data from RAWMARYXML to REALISED_ACOUSTPARAMS:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+Nach links in
+</p>
+</maryxml>
+
+Determining which modules to use
+Module JTokeniser converts RAWMARYXML into TOKENS (locale de, voice bits1-hsmm)
+Module Preprocess converts TOKENS into WORDS (locale de, voice bits1-hsmm)
+Module OpenNLPPosTagger converts WORDS into PARTSOFSPEECH (locale de, voice bits1-hsmm)
+Module JPhonemiser_de converts PARTSOFSPEECH into PHONEMES (locale de, voice bits1-hsmm)
+Module Prosody converts PHONEMES into INTONATION (locale de, voice bits1-hsmm)
+Module PronunciationModel converts INTONATION into ALLOPHONES (locale de, voice bits1-hsmm)
+Module AcousticModeller converts ALLOPHONES into ACOUSTPARAMS (locale de, voice bits1-hsmm)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale de, voice bits1-hsmm)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- JTokeniser (marytts.language.de.JTokeniser)
+- Preprocess (marytts.language.de.Preprocess)
+- OpenNLPPosTagger (marytts.modules.OpenNLPPosTagger)
+- JPhonemiser_de (marytts.language.de.JPhonemiser)
+- Prosody (marytts.language.de.Prosody)
+- PronunciationModel (marytts.language.de.Postlex)
+- AcousticModeller (marytts.modules.AcousticModeller)
+- Synthesis (marytts.modules.Synthesis)
+- Realised acoustparams extractor (marytts.modules.RealisedAcoustparamsExtractor)
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+Nach links in
+</p>
+</maryxml>
+
+Next module: JTokeniser
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+Nach
+</t>
+<t>
+links
+</t>
+<t>
+in
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Preprocess
+Expanding say-as elements...
+Matching and expanding patterns...
+Now applying ep marytts.language.de.preprocess.MultiWordEP@30c1a834 to token Nach 
+Now applying ep marytts.language.de.preprocess.NetEP@7a0a06ed to token Nach 
+Now applying ep marytts.language.de.preprocess.CompositeEP@284cf033 to token Nach 
+Now applying ep marytts.language.de.preprocess.DateEP@532db8f0 to token Nach 
+Now applying ep marytts.language.de.preprocess.TimeEP@5ec8bf39 to token Nach 
+Now applying ep marytts.language.de.preprocess.DurationEP@4d8267cc to token Nach 
+Now applying ep marytts.language.de.preprocess.CurrencyEP@2c6ca9d5 to token Nach 
+Now applying ep marytts.language.de.preprocess.MeasureEP@1201f5bc to token Nach 
+Now applying ep marytts.language.de.preprocess.TelephoneEP@3eac12e0 to token Nach 
+Now applying ep marytts.language.de.preprocess.AbbrevEP@130b5045 to token Nach 
+Now applying ep marytts.language.de.preprocess.NumberEP@4bc2ebc7 to token Nach 
+Now applying ep marytts.language.de.preprocess.SpecialCharEP@6a057cac to token Nach 
+Now applying ep marytts.language.de.preprocess.MultiWordEP@30c1a834 to token links 
+Now applying ep marytts.language.de.preprocess.NetEP@7a0a06ed to token links 
+Now applying ep marytts.language.de.preprocess.CompositeEP@284cf033 to token links 
+Now applying ep marytts.language.de.preprocess.DateEP@532db8f0 to token links 
+Now applying ep marytts.language.de.preprocess.TimeEP@5ec8bf39 to token links 
+Now applying ep marytts.language.de.preprocess.DurationEP@4d8267cc to token links 
+Now applying ep marytts.language.de.preprocess.CurrencyEP@2c6ca9d5 to token links 
+Now applying ep marytts.language.de.preprocess.MeasureEP@1201f5bc to token links 
+Now applying ep marytts.language.de.preprocess.TelephoneEP@3eac12e0 to token links 
+Now applying ep marytts.language.de.preprocess.AbbrevEP@130b5045 to token links 
+Now applying ep marytts.language.de.preprocess.NumberEP@4bc2ebc7 to token links 
+Now applying ep marytts.language.de.preprocess.SpecialCharEP@6a057cac to token links 
+Now applying ep marytts.language.de.preprocess.MultiWordEP@30c1a834 to token in 
+Now applying ep marytts.language.de.preprocess.NetEP@7a0a06ed to token in 
+Now applying ep marytts.language.de.preprocess.CompositeEP@284cf033 to token in 
+Now applying ep marytts.language.de.preprocess.DateEP@532db8f0 to token in 
+Now applying ep marytts.language.de.preprocess.TimeEP@5ec8bf39 to token in 
+Now applying ep marytts.language.de.preprocess.DurationEP@4d8267cc to token in 
+Now applying ep marytts.language.de.preprocess.CurrencyEP@2c6ca9d5 to token in 
+Now applying ep marytts.language.de.preprocess.MeasureEP@1201f5bc to token in 
+Now applying ep marytts.language.de.preprocess.TelephoneEP@3eac12e0 to token in 
+Now applying ep marytts.language.de.preprocess.AbbrevEP@130b5045 to token in 
+Now applying ep marytts.language.de.preprocess.NumberEP@4bc2ebc7 to token in 
+Now applying ep marytts.language.de.preprocess.SpecialCharEP@6a057cac to token in 
+Done.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+Nach
+</t>
+<t>
+links
+</t>
+<t>
+in
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: OpenNLPPosTagger
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t pos="APPR">
+Nach
+</t>
+<t pos="ADV">
+links
+</t>
+<t pos="APPR">
+in
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: JPhonemiser_de
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t g2p_method="lexicon" ph="' n a: x" pos="APPR">
+Nach
+</t>
+<t g2p_method="lexicon" ph="' l I N k s" pos="ADV">
+links
+</t>
+<t g2p_method="lexicon" ph="' ? I n" pos="APPR">
+in
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Prosody
+Processing next sentence
+Now looking at token `Nach'
+Starting treewalker at token Nach
+Now looking at token `links'
+Starting treewalker at token links
+Now looking at token `in'
+insertBoundary: after token `in', tone L-%, bi 5
+Starting treewalker at token in
+tw found a boundary
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t g2p_method="lexicon" ph="' n a: x" pos="APPR">
+Nach
+</t>
+<t g2p_method="lexicon" ph="' l I N k s" pos="ADV">
+links
+</t>
+<t g2p_method="lexicon" ph="' ? I n" pos="APPR">
+in
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: PronunciationModel
+Getting xml-data from document finished.
+Setting the changed xml document finished.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t g2p_method="lexicon" ph="' n a: x" pos="APPR">
+Nach
+<syllable ph="n a: x" stress="1">
+<ph p="n"/>
+<ph p="a:"/>
+<ph p="x"/>
+</syllable>
+</t>
+<t g2p_method="lexicon" ph="' l I N k s" pos="ADV">
+links
+<syllable ph="l I N k s" stress="1">
+<ph p="l"/>
+<ph p="I"/>
+<ph p="N"/>
+<ph p="k"/>
+<ph p="s"/>
+</syllable>
+</t>
+<t g2p_method="lexicon" ph="' ? I n" pos="APPR">
+in
+<syllable ph="? I n" stress="1">
+<ph p="?"/>
+<ph p="I"/>
+<ph p="n"/>
+</syllable>
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: AcousticModeller
+predicting duration
+predicting F0
+using already created utterance model, it contains predicted state durations.
+utteranceFrame=165 lf0frame=105
+Parameter generation for LF0: 
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+
+Applying prosody modification if any:
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t g2p_method="lexicon" ph="' n a: x" pos="APPR">
+Nach
+<syllable ph="n a: x" stress="1">
+<ph d="70" end="0.07" f0="(7,143)(14,164)(21,165)(28,165)(35,165)(42,165)(50,166)(57,166)(64,166)(71,166)(78,166)(85,167)(92,168)(100,171)" p="n"/>
+<ph d="75" end="0.145" f0="(6,170)(13,167)(20,163)(26,162)(33,162)(40,161)(46,161)(53,160)(60,160)(66,160)(73,160)(80,162)(86,163)(93,164)(100,163)" p="a:"/>
+<ph d="100" end="0.24499999" f0="(33,162)(66,161)(100,160)" p="x"/>
+</syllable>
+</t>
+<t g2p_method="lexicon" ph="' l I N k s" pos="ADV">
+links
+<syllable ph="l I N k s" stress="1">
+<ph d="55" end="0.29999998" f0="(11,179)(22,175)(33,173)(44,172)(55,171)(66,171)(77,170)(88,169)(100,168)" p="l"/>
+<ph d="60" end="0.35999998" f0="(8,167)(16,166)(25,165)(33,165)(41,165)(50,165)(58,165)(66,165)(75,164)(83,164)(91,164)(100,163)" p="I"/>
+<ph d="80" end="0.44" f0="(6,166)(12,168)(18,170)(25,171)(31,172)(37,173)(43,174)(50,174)(56,175)(62,174)(68,174)(75,173)(81,171)(87,170)(93,168)(100,166)" p="N"/>
+<ph d="80" end="0.52" f0="(25,164)(50,163)(75,162)(100,162)" p="k"/>
+<ph d="110" end="0.63" p="s"/>
+</syllable>
+</t>
+<t g2p_method="lexicon" ph="' ? I n" pos="APPR">
+in
+<syllable ph="? I n" stress="1">
+<ph d="40" end="0.67" f0="(100,152)" p="?"/>
+<ph d="60" end="0.73" f0="(8,127)(16,129)(25,132)(33,137)(41,140)(50,141)(58,142)(66,141)(75,140)(83,138)(91,135)(100,132)" p="I"/>
+<ph d="95" end="0.82500005" f0="(5,131)(10,130)(15,129)(21,128)(26,127)(31,125)(36,124)(42,122)(47,121)(52,120)(57,119)(63,119)(68,118)(73,118)(78,117)(84,117)(89,117)(94,117)(100,117)" p="n"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="400" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: Synthesis
+Synthesizing one sentence.
+Using prosody from acoustparams.
+Number of models in sentence numModel=12  Total number of states numState=60
+Total number of frames=233  Number of voiced frames=112
+Next module: Realised acoustparams extractor
+Request processed in 503 ms.
+   TextToMaryXML took 1 ms
+   JTokeniser took 5 ms
+   Preprocess took 101 ms
+   OpenNLPPosTagger took 37 ms
+   JPhonemiser_de took 7 ms
+   Prosody took 9 ms
+   PronunciationModel took 6 ms
+   AcousticModeller took 42 ms
+   Synthesis took 124 ms
+   Realised acoustparams extractor took 0 ms
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t g2p_method="lexicon" ph="' n a: x" pos="APPR">
+Nach
+<syllable ph="n a: x" stress="1">
+<ph d="70" end="0.07" f0="(7,143)(14,164)(21,165)(28,165)(35,165)(42,165)(50,166)(57,166)(64,166)(71,166)(78,166)(85,167)(92,168)(100,171)" p="n"/>
+<ph d="75" end="0.14500001" f0="(6,170)(13,167)(20,163)(26,162)(33,162)(40,161)(46,161)(53,160)(60,160)(66,160)(73,160)(80,162)(86,163)(93,164)(100,163)" p="a:"/>
+<ph d="100" end="0.245" f0="(33,162)(66,161)(100,160)" p="x"/>
+</syllable>
+</t>
+<t g2p_method="lexicon" ph="' l I N k s" pos="ADV">
+links
+<syllable ph="l I N k s" stress="1">
+<ph d="55" end="0.3" f0="(11,179)(22,175)(33,173)(44,172)(55,171)(66,171)(77,170)(88,169)(100,168)" p="l"/>
+<ph d="60" end="0.36" f0="(8,167)(16,166)(25,165)(33,165)(41,165)(50,165)(58,165)(66,165)(75,164)(83,164)(91,164)(100,163)" p="I"/>
+<ph d="80" end="0.44000003" f0="(6,166)(12,168)(18,170)(25,171)(31,172)(37,173)(43,174)(50,174)(56,175)(62,174)(68,174)(75,173)(81,171)(87,170)(93,168)(100,166)" p="N"/>
+<ph d="80" end="0.52000004" f0="(25,164)(50,163)(75,162)(100,162)" p="k"/>
+<ph d="110" end="0.63000005" f0="" p="s"/>
+</syllable>
+</t>
+<t g2p_method="lexicon" ph="' ? I n" pos="APPR">
+in
+<syllable ph="? I n" stress="1">
+<ph d="40" end="0.6700001" f0="(100,152)" p="?"/>
+<ph d="60" end="0.7300001" f0="(8,127)(16,129)(25,132)(33,137)(41,140)(50,141)(58,142)(66,141)(75,140)(83,138)(91,135)(100,132)" p="I"/>
+<ph d="95" end="0.8250001" f0="(5,131)(10,130)(15,129)(21,128)(26,127)(31,125)(36,124)(42,122)(47,121)(52,120)(57,119)(63,119)(68,118)(73,118)(78,117)(84,117)(89,117)(94,117)(100,117)" p="n"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="340" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+audioFormat is PCM_SIGNED 16000.0 Hz, 16 bit, mono, 2 bytes/frame, little-endian
+query is hundert
+New request (input type "TEXT", output type "REALISED_ACOUSTPARAMS", voice "bits1-hsmm", audio "WAVE")
+Setting text input: hundert
+Now converting the following input data from TEXT to RAWMARYXML:
+Writing Text output:
+hundert
+Determining which modules to use
+Module TextToMaryXML converts TEXT into RAWMARYXML (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- TextToMaryXML (marytts.modules.TextToMaryXML)
+Handing the following data to the next module:
+Writing Text output:
+hundert
+Next module: TextToMaryXML
+textNodeString=`hundert'
+Now splitting the following RAWMARYXML data into chunks:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+hundert
+</p>
+</maryxml>
+
+Now converting the following input data from RAWMARYXML to REALISED_ACOUSTPARAMS:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+hundert
+</p>
+</maryxml>
+
+Determining which modules to use
+Module JTokeniser converts RAWMARYXML into TOKENS (locale de, voice bits1-hsmm)
+Module Preprocess converts TOKENS into WORDS (locale de, voice bits1-hsmm)
+Module OpenNLPPosTagger converts WORDS into PARTSOFSPEECH (locale de, voice bits1-hsmm)
+Module JPhonemiser_de converts PARTSOFSPEECH into PHONEMES (locale de, voice bits1-hsmm)
+Module Prosody converts PHONEMES into INTONATION (locale de, voice bits1-hsmm)
+Module PronunciationModel converts INTONATION into ALLOPHONES (locale de, voice bits1-hsmm)
+Module AcousticModeller converts ALLOPHONES into ACOUSTPARAMS (locale de, voice bits1-hsmm)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale de, voice bits1-hsmm)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- JTokeniser (marytts.language.de.JTokeniser)
+- Preprocess (marytts.language.de.Preprocess)
+- OpenNLPPosTagger (marytts.modules.OpenNLPPosTagger)
+- JPhonemiser_de (marytts.language.de.JPhonemiser)
+- Prosody (marytts.language.de.Prosody)
+- PronunciationModel (marytts.language.de.Postlex)
+- AcousticModeller (marytts.modules.AcousticModeller)
+- Synthesis (marytts.modules.Synthesis)
+- Realised acoustparams extractor (marytts.modules.RealisedAcoustparamsExtractor)
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+hundert
+</p>
+</maryxml>
+
+Next module: JTokeniser
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+hundert
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Preprocess
+Expanding say-as elements...
+Matching and expanding patterns...
+Now applying ep marytts.language.de.preprocess.MultiWordEP@30c1a834 to token hundert 
+Now applying ep marytts.language.de.preprocess.NetEP@7a0a06ed to token hundert 
+Now applying ep marytts.language.de.preprocess.CompositeEP@284cf033 to token hundert 
+Now applying ep marytts.language.de.preprocess.DateEP@532db8f0 to token hundert 
+Now applying ep marytts.language.de.preprocess.TimeEP@5ec8bf39 to token hundert 
+Now applying ep marytts.language.de.preprocess.DurationEP@4d8267cc to token hundert 
+Now applying ep marytts.language.de.preprocess.CurrencyEP@2c6ca9d5 to token hundert 
+Now applying ep marytts.language.de.preprocess.MeasureEP@1201f5bc to token hundert 
+Now applying ep marytts.language.de.preprocess.TelephoneEP@3eac12e0 to token hundert 
+Now applying ep marytts.language.de.preprocess.AbbrevEP@130b5045 to token hundert 
+Now applying ep marytts.language.de.preprocess.NumberEP@4bc2ebc7 to token hundert 
+Now applying ep marytts.language.de.preprocess.SpecialCharEP@6a057cac to token hundert 
+Done.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+hundert
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: OpenNLPPosTagger
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t pos="CARD">
+hundert
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: JPhonemiser_de
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t g2p_method="lexicon" ph="' h U n - d 6 t" pos="CARD">
+hundert
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Prosody
+Processing next sentence
+Now looking at token `hundert'
+insertBoundary: after token `hundert', tone L-%, bi 5
+Starting treewalker at token hundert
+tw found a boundary
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' h U n - d 6 t" pos="CARD">
+hundert
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: PronunciationModel
+Getting xml-data from document finished.
+Setting the changed xml document finished.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' h U n - d 6 t" pos="CARD">
+hundert
+<syllable accent="H*" ph="h U n" stress="1">
+<ph p="h"/>
+<ph p="U"/>
+<ph p="n"/>
+</syllable>
+<syllable ph="d 6 t">
+<ph p="d"/>
+<ph p="6"/>
+<ph p="t"/>
+</syllable>
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: AcousticModeller
+predicting duration
+predicting F0
+using already created utterance model, it contains predicted state durations.
+utteranceFrame=109 lf0frame=63
+Parameter generation for LF0: 
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+
+Applying prosody modification if any:
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' h U n - d 6 t" pos="CARD">
+hundert
+<syllable accent="H*" ph="h U n" stress="1">
+<ph d="80" end="0.08" f0="(33,152)(66,161)(100,162)" p="h"/>
+<ph d="40" end="0.12" f0="(12,162)(25,160)(37,159)(50,158)(62,157)(75,155)(87,154)(100,153)" p="U"/>
+<ph d="90" end="0.21" f0="(5,155)(11,159)(16,159)(22,158)(27,157)(33,157)(38,156)(44,155)(50,154)(55,153)(61,152)(66,151)(72,149)(77,148)(83,147)(88,146)(94,144)(100,143)" p="n"/>
+</syllable>
+<syllable ph="d 6 t">
+<ph d="30" end="0.24" f0="(20,141)(40,140)(60,140)(80,141)(100,152)" p="d"/>
+<ph d="145" end="0.385" f0="(3,145)(6,143)(10,141)(13,141)(17,142)(20,144)(24,145)(27,145)(31,146)(34,146)(37,146)(41,146)(44,146)(48,145)(51,144)(55,143)(58,142)(62,140)(65,138)(68,136)(72,134)(75,131)(79,126)(82,124)(86,121)(89,120)(93,119)(96,119)(100,119)" p="6"/>
+<ph d="160" end="0.54499996" p="t"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="400" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: Synthesis
+Synthesizing one sentence.
+Using prosody from acoustparams.
+Number of models in sentence numModel=7  Total number of states numState=35
+Total number of frames=143  Number of voiced frames=63
+Next module: Realised acoustparams extractor
+Request processed in 38 ms.
+   TextToMaryXML took 1 ms
+   JTokeniser took 2 ms
+   Preprocess took 2 ms
+   OpenNLPPosTagger took 1 ms
+   JPhonemiser_de took 2 ms
+   Prosody took 4 ms
+   PronunciationModel took 2 ms
+   AcousticModeller took 12 ms
+   Synthesis took 6 ms
+   Realised acoustparams extractor took 0 ms
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' h U n - d 6 t" pos="CARD">
+hundert
+<syllable accent="H*" ph="h U n" stress="1">
+<ph d="80" end="0.080000006" f0="(33,152)(66,161)(100,162)" p="h"/>
+<ph d="40" end="0.120000005" f0="(12,162)(25,160)(37,159)(50,158)(62,157)(75,155)(87,154)(100,153)" p="U"/>
+<ph d="90" end="0.21000001" f0="(5,155)(11,159)(16,159)(22,158)(27,157)(33,157)(38,156)(44,155)(50,154)(55,153)(61,152)(66,151)(72,149)(77,148)(83,147)(88,146)(94,144)(100,143)" p="n"/>
+</syllable>
+<syllable ph="d 6 t">
+<ph d="30" end="0.24000001" f0="(20,141)(40,140)(60,140)(80,141)(100,152)" p="d"/>
+<ph d="145" end="0.38500002" f0="(3,145)(6,143)(10,141)(13,141)(17,142)(20,144)(24,145)(27,145)(31,146)(34,146)(37,146)(41,146)(44,146)(48,145)(51,144)(55,143)(58,142)(62,140)(65,138)(68,136)(72,134)(75,131)(79,126)(82,124)(86,121)(89,120)(93,119)(96,119)(100,119)" p="6"/>
+<ph d="160" end="0.545" f0="" p="t"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="170" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+audioFormat is PCM_SIGNED 16000.0 Hz, 16 bit, mono, 2 bytes/frame, little-endian
+query is achtzig
+New request (input type "TEXT", output type "REALISED_ACOUSTPARAMS", voice "bits1-hsmm", audio "WAVE")
+Setting text input: achtzig
+Now converting the following input data from TEXT to RAWMARYXML:
+Writing Text output:
+achtzig
+Determining which modules to use
+Module TextToMaryXML converts TEXT into RAWMARYXML (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- TextToMaryXML (marytts.modules.TextToMaryXML)
+Handing the following data to the next module:
+Writing Text output:
+achtzig
+Next module: TextToMaryXML
+textNodeString=`achtzig'
+Now splitting the following RAWMARYXML data into chunks:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+achtzig
+</p>
+</maryxml>
+
+Now converting the following input data from RAWMARYXML to REALISED_ACOUSTPARAMS:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+achtzig
+</p>
+</maryxml>
+
+Determining which modules to use
+Module JTokeniser converts RAWMARYXML into TOKENS (locale de, voice bits1-hsmm)
+Module Preprocess converts TOKENS into WORDS (locale de, voice bits1-hsmm)
+Module OpenNLPPosTagger converts WORDS into PARTSOFSPEECH (locale de, voice bits1-hsmm)
+Module JPhonemiser_de converts PARTSOFSPEECH into PHONEMES (locale de, voice bits1-hsmm)
+Module Prosody converts PHONEMES into INTONATION (locale de, voice bits1-hsmm)
+Module PronunciationModel converts INTONATION into ALLOPHONES (locale de, voice bits1-hsmm)
+Module AcousticModeller converts ALLOPHONES into ACOUSTPARAMS (locale de, voice bits1-hsmm)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale de, voice bits1-hsmm)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- JTokeniser (marytts.language.de.JTokeniser)
+- Preprocess (marytts.language.de.Preprocess)
+- OpenNLPPosTagger (marytts.modules.OpenNLPPosTagger)
+- JPhonemiser_de (marytts.language.de.JPhonemiser)
+- Prosody (marytts.language.de.Prosody)
+- PronunciationModel (marytts.language.de.Postlex)
+- AcousticModeller (marytts.modules.AcousticModeller)
+- Synthesis (marytts.modules.Synthesis)
+- Realised acoustparams extractor (marytts.modules.RealisedAcoustparamsExtractor)
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+achtzig
+</p>
+</maryxml>
+
+Next module: JTokeniser
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+achtzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Preprocess
+Expanding say-as elements...
+Matching and expanding patterns...
+Now applying ep marytts.language.de.preprocess.MultiWordEP@30c1a834 to token achtzig 
+Now applying ep marytts.language.de.preprocess.NetEP@7a0a06ed to token achtzig 
+Now applying ep marytts.language.de.preprocess.CompositeEP@284cf033 to token achtzig 
+Now applying ep marytts.language.de.preprocess.DateEP@532db8f0 to token achtzig 
+Now applying ep marytts.language.de.preprocess.TimeEP@5ec8bf39 to token achtzig 
+Now applying ep marytts.language.de.preprocess.DurationEP@4d8267cc to token achtzig 
+Now applying ep marytts.language.de.preprocess.CurrencyEP@2c6ca9d5 to token achtzig 
+Now applying ep marytts.language.de.preprocess.MeasureEP@1201f5bc to token achtzig 
+Now applying ep marytts.language.de.preprocess.TelephoneEP@3eac12e0 to token achtzig 
+Now applying ep marytts.language.de.preprocess.AbbrevEP@130b5045 to token achtzig 
+Now applying ep marytts.language.de.preprocess.NumberEP@4bc2ebc7 to token achtzig 
+Now applying ep marytts.language.de.preprocess.SpecialCharEP@6a057cac to token achtzig 
+Done.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+achtzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: OpenNLPPosTagger
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t pos="ADJD">
+achtzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: JPhonemiser_de
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t g2p_method="lexicon" ph="' ? a x t - ts I C" pos="ADJD">
+achtzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Prosody
+Processing next sentence
+Now looking at token `achtzig'
+insertBoundary: after token `achtzig', tone L-%, bi 5
+Starting treewalker at token achtzig
+tw found a boundary
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' ? a x t - ts I C" pos="ADJD">
+achtzig
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: PronunciationModel
+Getting xml-data from document finished.
+Setting the changed xml document finished.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' ? a x t - ts I C" pos="ADJD">
+achtzig
+<syllable accent="H*" ph="? a x t" stress="1">
+<ph p="?"/>
+<ph p="a"/>
+<ph p="x"/>
+<ph p="t"/>
+</syllable>
+<syllable ph="ts I C">
+<ph p="ts"/>
+<ph p="I"/>
+<ph p="C"/>
+</syllable>
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: AcousticModeller
+predicting duration
+predicting F0
+using already created utterance model, it contains predicted state durations.
+utteranceFrame=141 lf0frame=27
+Parameter generation for LF0: 
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+
+Applying prosody modification if any:
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' ? a x t - ts I C" pos="ADJD">
+achtzig
+<syllable accent="H*" ph="? a x t" stress="1">
+<ph d="85" end="0.085" p="?"/>
+<ph d="75" end="0.16" f0="(9,140)(18,142)(27,143)(36,143)(45,142)(54,141)(63,140)(72,139)(81,138)(90,136)(100,133)" p="a"/>
+<ph d="105" end="0.265" f0="(33,131)(66,130)(100,130)" p="x"/>
+<ph d="85" end="0.35" p="t"/>
+</syllable>
+<syllable ph="ts I C">
+<ph d="100" end="0.45" p="ts"/>
+<ph d="60" end="0.51" f0="(10,126)(20,124)(30,124)(40,124)(50,123)(60,122)(70,120)(80,119)(90,117)(100,114)" p="I"/>
+<ph d="195" end="0.705" f0="(33,113)(66,112)(100,112)" p="C"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="400" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: Synthesis
+Synthesizing one sentence.
+Using prosody from acoustparams.
+Number of models in sentence numModel=8  Total number of states numState=40
+Total number of frames=175  Number of voiced frames=27
+Next module: Realised acoustparams extractor
+Request processed in 36 ms.
+   TextToMaryXML took 0 ms
+   JTokeniser took 1 ms
+   Preprocess took 3 ms
+   OpenNLPPosTagger took 1 ms
+   JPhonemiser_de took 2 ms
+   Prosody took 3 ms
+   PronunciationModel took 2 ms
+   AcousticModeller took 13 ms
+   Synthesis took 6 ms
+   Realised acoustparams extractor took 0 ms
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' ? a x t - ts I C" pos="ADJD">
+achtzig
+<syllable accent="H*" ph="? a x t" stress="1">
+<ph d="85" end="0.085" f0="" p="?"/>
+<ph d="75" end="0.16" f0="(9,140)(18,142)(27,143)(36,143)(45,142)(54,141)(63,140)(72,139)(81,138)(90,136)(100,133)" p="a"/>
+<ph d="105" end="0.265" f0="(33,131)(66,130)(100,130)" p="x"/>
+<ph d="85" end="0.35" f0="" p="t"/>
+</syllable>
+<syllable ph="ts I C">
+<ph d="100" end="0.45" f0="" p="ts"/>
+<ph d="60" end="0.51" f0="(10,126)(20,124)(30,124)(40,124)(50,123)(60,122)(70,120)(80,119)(90,117)(100,114)" p="I"/>
+<ph d="195" end="0.705" f0="(33,113)(66,112)(100,112)" p="C"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="170" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+audioFormat is PCM_SIGNED 16000.0 Hz, 16 bit, mono, 2 bytes/frame, little-endian
+query is fünfzig
+New request (input type "TEXT", output type "REALISED_ACOUSTPARAMS", voice "bits1-hsmm", audio "WAVE")
+Setting text input: fünfzig
+Now converting the following input data from TEXT to RAWMARYXML:
+Writing Text output:
+fünfzig
+Determining which modules to use
+Module TextToMaryXML converts TEXT into RAWMARYXML (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- TextToMaryXML (marytts.modules.TextToMaryXML)
+Handing the following data to the next module:
+Writing Text output:
+fünfzig
+Next module: TextToMaryXML
+textNodeString=`fünfzig'
+Now splitting the following RAWMARYXML data into chunks:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+fünfzig
+</p>
+</maryxml>
+
+Now converting the following input data from RAWMARYXML to REALISED_ACOUSTPARAMS:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+fünfzig
+</p>
+</maryxml>
+
+Determining which modules to use
+Module JTokeniser converts RAWMARYXML into TOKENS (locale de, voice bits1-hsmm)
+Module Preprocess converts TOKENS into WORDS (locale de, voice bits1-hsmm)
+Module OpenNLPPosTagger converts WORDS into PARTSOFSPEECH (locale de, voice bits1-hsmm)
+Module JPhonemiser_de converts PARTSOFSPEECH into PHONEMES (locale de, voice bits1-hsmm)
+Module Prosody converts PHONEMES into INTONATION (locale de, voice bits1-hsmm)
+Module PronunciationModel converts INTONATION into ALLOPHONES (locale de, voice bits1-hsmm)
+Module AcousticModeller converts ALLOPHONES into ACOUSTPARAMS (locale de, voice bits1-hsmm)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale de, voice bits1-hsmm)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- JTokeniser (marytts.language.de.JTokeniser)
+- Preprocess (marytts.language.de.Preprocess)
+- OpenNLPPosTagger (marytts.modules.OpenNLPPosTagger)
+- JPhonemiser_de (marytts.language.de.JPhonemiser)
+- Prosody (marytts.language.de.Prosody)
+- PronunciationModel (marytts.language.de.Postlex)
+- AcousticModeller (marytts.modules.AcousticModeller)
+- Synthesis (marytts.modules.Synthesis)
+- Realised acoustparams extractor (marytts.modules.RealisedAcoustparamsExtractor)
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+fünfzig
+</p>
+</maryxml>
+
+Next module: JTokeniser
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+fünfzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Preprocess
+Expanding say-as elements...
+Matching and expanding patterns...
+Now applying ep marytts.language.de.preprocess.MultiWordEP@30c1a834 to token fünfzig 
+Now applying ep marytts.language.de.preprocess.NetEP@7a0a06ed to token fünfzig 
+Now applying ep marytts.language.de.preprocess.CompositeEP@284cf033 to token fünfzig 
+Now applying ep marytts.language.de.preprocess.DateEP@532db8f0 to token fünfzig 
+Now applying ep marytts.language.de.preprocess.TimeEP@5ec8bf39 to token fünfzig 
+Now applying ep marytts.language.de.preprocess.DurationEP@4d8267cc to token fünfzig 
+Now applying ep marytts.language.de.preprocess.CurrencyEP@2c6ca9d5 to token fünfzig 
+Now applying ep marytts.language.de.preprocess.MeasureEP@1201f5bc to token fünfzig 
+Now applying ep marytts.language.de.preprocess.TelephoneEP@3eac12e0 to token fünfzig 
+Now applying ep marytts.language.de.preprocess.AbbrevEP@130b5045 to token fünfzig 
+Now applying ep marytts.language.de.preprocess.NumberEP@4bc2ebc7 to token fünfzig 
+Now applying ep marytts.language.de.preprocess.SpecialCharEP@6a057cac to token fünfzig 
+Done.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+fünfzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: OpenNLPPosTagger
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t pos="ADJD">
+fünfzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: JPhonemiser_de
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t g2p_method="lexicon" ph="' f Y n f - ts I C" pos="ADJD">
+fünfzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Prosody
+Processing next sentence
+Now looking at token `fünfzig'
+insertBoundary: after token `fünfzig', tone L-%, bi 5
+Starting treewalker at token fünfzig
+tw found a boundary
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' f Y n f - ts I C" pos="ADJD">
+fünfzig
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: PronunciationModel
+Getting xml-data from document finished.
+Setting the changed xml document finished.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' f Y n f - ts I C" pos="ADJD">
+fünfzig
+<syllable accent="H*" ph="f Y n f" stress="1">
+<ph p="f"/>
+<ph p="Y"/>
+<ph p="n"/>
+<ph p="f"/>
+</syllable>
+<syllable ph="ts I C">
+<ph p="ts"/>
+<ph p="I"/>
+<ph p="C"/>
+</syllable>
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: AcousticModeller
+predicting duration
+predicting F0
+using already created utterance model, it contains predicted state durations.
+utteranceFrame=149 lf0frame=43
+Parameter generation for LF0: 
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+
+Applying prosody modification if any:
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' f Y n f - ts I C" pos="ADJD">
+fünfzig
+<syllable accent="H*" ph="f Y n f" stress="1">
+<ph d="110" end="0.11" f0="(33,137)(66,137)(100,137)" p="f"/>
+<ph d="65" end="0.175" f0="(7,188)(15,181)(23,174)(30,168)(38,164)(46,162)(53,161)(61,160)(69,159)(76,157)(84,156)(92,155)(100,154)" p="Y"/>
+<ph d="55" end="0.22999999" f0="(9,157)(18,160)(27,160)(36,159)(45,159)(54,158)(63,157)(72,155)(81,154)(90,152)(100,149)" p="n"/>
+<ph d="115" end="0.34499997" f0="(33,146)(66,144)(100,143)" p="f"/>
+</syllable>
+<syllable ph="ts I C">
+<ph d="145" end="0.48999995" p="ts"/>
+<ph d="60" end="0.54999995" f0="(10,129)(20,128)(30,128)(40,128)(50,128)(60,127)(70,125)(80,123)(90,121)(100,115)" p="I"/>
+<ph d="195" end="0.74499995" f0="(33,114)(66,113)(100,113)" p="C"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="400" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: Synthesis
+Synthesizing one sentence.
+Using prosody from acoustparams.
+Number of models in sentence numModel=8  Total number of states numState=40
+Total number of frames=183  Number of voiced frames=43
+Next module: Realised acoustparams extractor
+Request processed in 59 ms.
+   TextToMaryXML took 0 ms
+   JTokeniser took 2 ms
+   Preprocess took 4 ms
+   OpenNLPPosTagger took 2 ms
+   JPhonemiser_de took 4 ms
+   Prosody took 3 ms
+   PronunciationModel took 4 ms
+   AcousticModeller took 20 ms
+   Synthesis took 9 ms
+   Realised acoustparams extractor took 0 ms
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' f Y n f - ts I C" pos="ADJD">
+fünfzig
+<syllable accent="H*" ph="f Y n f" stress="1">
+<ph d="110" end="0.11000001" f0="(33,137)(66,137)(100,137)" p="f"/>
+<ph d="65" end="0.17500001" f0="(7,188)(15,181)(23,174)(30,168)(38,164)(46,162)(53,161)(61,160)(69,159)(76,157)(84,156)(92,155)(100,154)" p="Y"/>
+<ph d="55" end="0.23000002" f0="(9,157)(18,160)(27,160)(36,159)(45,159)(54,158)(63,157)(72,155)(81,154)(90,152)(100,149)" p="n"/>
+<ph d="115" end="0.34500003" f0="(33,146)(66,144)(100,143)" p="f"/>
+</syllable>
+<syllable ph="ts I C">
+<ph d="145" end="0.49000004" f0="" p="ts"/>
+<ph d="60" end="0.5500001" f0="(10,129)(20,128)(30,128)(40,128)(50,128)(60,127)(70,125)(80,123)(90,121)(100,115)" p="I"/>
+<ph d="195" end="0.74500006" f0="(33,114)(66,113)(100,113)" p="C"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="170" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+audioFormat is PCM_SIGNED 16000.0 Hz, 16 bit, mono, 2 bytes/frame, little-endian
+query is zwanzig
+New request (input type "TEXT", output type "REALISED_ACOUSTPARAMS", voice "bits1-hsmm", audio "WAVE")
+Setting text input: zwanzig
+Now converting the following input data from TEXT to RAWMARYXML:
+Writing Text output:
+zwanzig
+Determining which modules to use
+Module TextToMaryXML converts TEXT into RAWMARYXML (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- TextToMaryXML (marytts.modules.TextToMaryXML)
+Handing the following data to the next module:
+Writing Text output:
+zwanzig
+Next module: TextToMaryXML
+textNodeString=`zwanzig'
+Now splitting the following RAWMARYXML data into chunks:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+zwanzig
+</p>
+</maryxml>
+
+Now converting the following input data from RAWMARYXML to REALISED_ACOUSTPARAMS:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+zwanzig
+</p>
+</maryxml>
+
+Determining which modules to use
+Module JTokeniser converts RAWMARYXML into TOKENS (locale de, voice bits1-hsmm)
+Module Preprocess converts TOKENS into WORDS (locale de, voice bits1-hsmm)
+Module OpenNLPPosTagger converts WORDS into PARTSOFSPEECH (locale de, voice bits1-hsmm)
+Module JPhonemiser_de converts PARTSOFSPEECH into PHONEMES (locale de, voice bits1-hsmm)
+Module Prosody converts PHONEMES into INTONATION (locale de, voice bits1-hsmm)
+Module PronunciationModel converts INTONATION into ALLOPHONES (locale de, voice bits1-hsmm)
+Module AcousticModeller converts ALLOPHONES into ACOUSTPARAMS (locale de, voice bits1-hsmm)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale de, voice bits1-hsmm)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- JTokeniser (marytts.language.de.JTokeniser)
+- Preprocess (marytts.language.de.Preprocess)
+- OpenNLPPosTagger (marytts.modules.OpenNLPPosTagger)
+- JPhonemiser_de (marytts.language.de.JPhonemiser)
+- Prosody (marytts.language.de.Prosody)
+- PronunciationModel (marytts.language.de.Postlex)
+- AcousticModeller (marytts.modules.AcousticModeller)
+- Synthesis (marytts.modules.Synthesis)
+- Realised acoustparams extractor (marytts.modules.RealisedAcoustparamsExtractor)
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+zwanzig
+</p>
+</maryxml>
+
+Next module: JTokeniser
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+zwanzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Preprocess
+Expanding say-as elements...
+Matching and expanding patterns...
+Now applying ep marytts.language.de.preprocess.MultiWordEP@30c1a834 to token zwanzig 
+Now applying ep marytts.language.de.preprocess.NetEP@7a0a06ed to token zwanzig 
+Now applying ep marytts.language.de.preprocess.CompositeEP@284cf033 to token zwanzig 
+Now applying ep marytts.language.de.preprocess.DateEP@532db8f0 to token zwanzig 
+Now applying ep marytts.language.de.preprocess.TimeEP@5ec8bf39 to token zwanzig 
+Now applying ep marytts.language.de.preprocess.DurationEP@4d8267cc to token zwanzig 
+Now applying ep marytts.language.de.preprocess.CurrencyEP@2c6ca9d5 to token zwanzig 
+Now applying ep marytts.language.de.preprocess.MeasureEP@1201f5bc to token zwanzig 
+Now applying ep marytts.language.de.preprocess.TelephoneEP@3eac12e0 to token zwanzig 
+Now applying ep marytts.language.de.preprocess.AbbrevEP@130b5045 to token zwanzig 
+Now applying ep marytts.language.de.preprocess.NumberEP@4bc2ebc7 to token zwanzig 
+Now applying ep marytts.language.de.preprocess.SpecialCharEP@6a057cac to token zwanzig 
+Done.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+zwanzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: OpenNLPPosTagger
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t pos="CARD">
+zwanzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: JPhonemiser_de
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t g2p_method="lexicon" ph="' ts v a n - ts I C" pos="CARD">
+zwanzig
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Prosody
+Processing next sentence
+Now looking at token `zwanzig'
+insertBoundary: after token `zwanzig', tone L-%, bi 5
+Starting treewalker at token zwanzig
+tw found a boundary
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' ts v a n - ts I C" pos="CARD">
+zwanzig
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: PronunciationModel
+Getting xml-data from document finished.
+Setting the changed xml document finished.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' ts v a n - ts I C" pos="CARD">
+zwanzig
+<syllable accent="H*" ph="ts v a n" stress="1">
+<ph p="ts"/>
+<ph p="v"/>
+<ph p="a"/>
+<ph p="n"/>
+</syllable>
+<syllable ph="ts I C">
+<ph p="ts"/>
+<ph p="I"/>
+<ph p="C"/>
+</syllable>
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: AcousticModeller
+predicting duration
+predicting F0
+using already created utterance model, it contains predicted state durations.
+utteranceFrame=141 lf0frame=47
+Parameter generation for LF0: 
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+
+Applying prosody modification if any:
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' ts v a n - ts I C" pos="CARD">
+zwanzig
+<syllable accent="H*" ph="ts v a n" stress="1">
+<ph d="155" end="0.155" p="ts"/>
+<ph d="35" end="0.19" f0="(20,161)(40,158)(60,156)(80,154)(100,152)" p="v"/>
+<ph d="90" end="0.28" f0="(5,151)(11,146)(16,146)(22,145)(27,145)(33,144)(38,143)(44,142)(50,142)(55,141)(61,140)(66,139)(72,138)(77,137)(83,136)(88,136)(94,135)(100,137)" p="a"/>
+<ph d="55" end="0.335" f0="(9,142)(18,142)(27,141)(36,141)(45,140)(54,139)(63,139)(72,138)(81,137)(90,136)(100,135)" p="n"/>
+</syllable>
+<syllable ph="ts I C">
+<ph d="115" end="0.45" p="ts"/>
+<ph d="60" end="0.51" f0="(9,127)(18,126)(27,124)(36,124)(45,124)(54,123)(63,122)(72,121)(81,119)(90,117)(100,116)" p="I"/>
+<ph d="195" end="0.705" f0="(50,115)(100,114)" p="C"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="400" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: Synthesis
+Synthesizing one sentence.
+Using prosody from acoustparams.
+Number of models in sentence numModel=8  Total number of states numState=40
+Total number of frames=175  Number of voiced frames=47
+Next module: Realised acoustparams extractor
+Request processed in 57 ms.
+   TextToMaryXML took 0 ms
+   JTokeniser took 2 ms
+   Preprocess took 4 ms
+   OpenNLPPosTagger took 2 ms
+   JPhonemiser_de took 2 ms
+   Prosody took 5 ms
+   PronunciationModel took 4 ms
+   AcousticModeller took 21 ms
+   Synthesis took 11 ms
+   Realised acoustparams extractor took 0 ms
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t accent="H*" g2p_method="lexicon" ph="' ts v a n - ts I C" pos="CARD">
+zwanzig
+<syllable accent="H*" ph="ts v a n" stress="1">
+<ph d="155" end="0.155" f0="" p="ts"/>
+<ph d="35" end="0.19" f0="(20,161)(40,158)(60,156)(80,154)(100,152)" p="v"/>
+<ph d="90" end="0.28" f0="(5,151)(11,146)(16,146)(22,145)(27,145)(33,144)(38,143)(44,142)(50,142)(55,141)(61,140)(66,139)(72,138)(77,137)(83,136)(88,136)(94,135)(100,137)" p="a"/>
+<ph d="55" end="0.335" f0="(9,142)(18,142)(27,141)(36,141)(45,140)(54,139)(63,139)(72,138)(81,137)(90,136)(100,135)" p="n"/>
+</syllable>
+<syllable ph="ts I C">
+<ph d="115" end="0.45000002" f0="" p="ts"/>
+<ph d="60" end="0.51" f0="(9,127)(18,126)(27,124)(36,124)(45,124)(54,123)(63,122)(72,121)(81,119)(90,117)(100,116)" p="I"/>
+<ph d="195" end="0.705" f0="(50,115)(100,114)" p="C"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="170" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+audioFormat is PCM_SIGNED 16000.0 Hz, 16 bit, mono, 2 bytes/frame, little-endian
+query is jetzt
+New request (input type "TEXT", output type "REALISED_ACOUSTPARAMS", voice "bits1-hsmm", audio "WAVE")
+Setting text input: jetzt
+Now converting the following input data from TEXT to RAWMARYXML:
+Writing Text output:
+jetzt
+Determining which modules to use
+Module TextToMaryXML converts TEXT into RAWMARYXML (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- TextToMaryXML (marytts.modules.TextToMaryXML)
+Handing the following data to the next module:
+Writing Text output:
+jetzt
+Next module: TextToMaryXML
+textNodeString=`jetzt'
+Now splitting the following RAWMARYXML data into chunks:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+jetzt
+</p>
+</maryxml>
+
+Now converting the following input data from RAWMARYXML to REALISED_ACOUSTPARAMS:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+jetzt
+</p>
+</maryxml>
+
+Determining which modules to use
+Module JTokeniser converts RAWMARYXML into TOKENS (locale de, voice bits1-hsmm)
+Module Preprocess converts TOKENS into WORDS (locale de, voice bits1-hsmm)
+Module OpenNLPPosTagger converts WORDS into PARTSOFSPEECH (locale de, voice bits1-hsmm)
+Module JPhonemiser_de converts PARTSOFSPEECH into PHONEMES (locale de, voice bits1-hsmm)
+Module Prosody converts PHONEMES into INTONATION (locale de, voice bits1-hsmm)
+Module PronunciationModel converts INTONATION into ALLOPHONES (locale de, voice bits1-hsmm)
+Module AcousticModeller converts ALLOPHONES into ACOUSTPARAMS (locale de, voice bits1-hsmm)
+Module Synthesis converts ACOUSTPARAMS into AUDIO (locale de, voice bits1-hsmm)
+Module Realised acoustparams extractor converts AUDIO into REALISED_ACOUSTPARAMS (locale de, voice bits1-hsmm)
+found path through modules
+Handling request using the following modules:
+- JTokeniser (marytts.language.de.JTokeniser)
+- Preprocess (marytts.language.de.Preprocess)
+- OpenNLPPosTagger (marytts.modules.OpenNLPPosTagger)
+- JPhonemiser_de (marytts.language.de.JPhonemiser)
+- Prosody (marytts.language.de.Prosody)
+- PronunciationModel (marytts.language.de.Postlex)
+- AcousticModeller (marytts.modules.AcousticModeller)
+- Synthesis (marytts.modules.Synthesis)
+- Realised acoustparams extractor (marytts.modules.RealisedAcoustparamsExtractor)
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+jetzt
+</p>
+</maryxml>
+
+Next module: JTokeniser
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+jetzt
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Preprocess
+Expanding say-as elements...
+Matching and expanding patterns...
+Now applying ep marytts.language.de.preprocess.MultiWordEP@30c1a834 to token jetzt 
+Now applying ep marytts.language.de.preprocess.NetEP@7a0a06ed to token jetzt 
+Now applying ep marytts.language.de.preprocess.CompositeEP@284cf033 to token jetzt 
+Now applying ep marytts.language.de.preprocess.DateEP@532db8f0 to token jetzt 
+Now applying ep marytts.language.de.preprocess.TimeEP@5ec8bf39 to token jetzt 
+Now applying ep marytts.language.de.preprocess.DurationEP@4d8267cc to token jetzt 
+Now applying ep marytts.language.de.preprocess.CurrencyEP@2c6ca9d5 to token jetzt 
+Now applying ep marytts.language.de.preprocess.MeasureEP@1201f5bc to token jetzt 
+Now applying ep marytts.language.de.preprocess.TelephoneEP@3eac12e0 to token jetzt 
+Now applying ep marytts.language.de.preprocess.AbbrevEP@130b5045 to token jetzt 
+Now applying ep marytts.language.de.preprocess.NumberEP@4bc2ebc7 to token jetzt 
+Now applying ep marytts.language.de.preprocess.SpecialCharEP@6a057cac to token jetzt 
+Done.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t>
+jetzt
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: OpenNLPPosTagger
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t pos="ADV">
+jetzt
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: JPhonemiser_de
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<t g2p_method="lexicon" ph="' j E ts t" pos="ADV">
+jetzt
+</t>
+</s>
+</p>
+</maryxml>
+
+Next module: Prosody
+Processing next sentence
+Now looking at token `jetzt'
+insertBoundary: after token `jetzt', tone L-%, bi 5
+Starting treewalker at token jetzt
+tw found a boundary
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t g2p_method="lexicon" ph="' j E ts t" pos="ADV">
+jetzt
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: PronunciationModel
+Getting xml-data from document finished.
+Setting the changed xml document finished.
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t g2p_method="lexicon" ph="' j E ts t" pos="ADV">
+jetzt
+<syllable ph="j E ts t" stress="1">
+<ph p="j"/>
+<ph p="E"/>
+<ph p="ts"/>
+<ph p="t"/>
+</syllable>
+</t>
+<boundary breakindex="5" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: AcousticModeller
+predicting duration
+predicting F0
+using already created utterance model, it contains predicted state durations.
+utteranceFrame=112 lf0frame=32
+Parameter generation for LF0: 
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+
+Applying prosody modification if any:
+Handing the following data to the next module:
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t g2p_method="lexicon" ph="' j E ts t" pos="ADV">
+jetzt
+<syllable ph="j E ts t" stress="1">
+<ph d="90" end="0.089999996" f0="(6,164)(12,164)(18,163)(25,161)(31,161)(37,161)(43,161)(50,161)(56,161)(62,161)(68,161)(75,162)(81,162)(87,163)(93,163)(100,162)" p="j"/>
+<ph d="80" end="0.16999999" f0="(6,159)(12,157)(18,154)(25,147)(31,146)(37,144)(43,142)(50,140)(56,136)(62,133)(68,130)(75,126)(81,124)(87,122)(93,120)(100,118)" p="E"/>
+<ph d="225" end="0.39499998" p="ts"/>
+<ph d="165" end="0.55999994" p="t"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="400" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Next module: Synthesis
+Synthesizing one sentence.
+Using prosody from acoustparams.
+Number of models in sentence numModel=5  Total number of states numState=25
+Total number of frames=143  Number of voiced frames=32
+Next module: Realised acoustparams extractor
+Request processed in 39 ms.
+   TextToMaryXML took 1 ms
+   JTokeniser took 2 ms
+   Preprocess took 2 ms
+   OpenNLPPosTagger took 1 ms
+   JPhonemiser_de took 3 ms
+   Prosody took 2 ms
+   PronunciationModel took 2 ms
+   AcousticModeller took 13 ms
+   Synthesis took 8 ms
+   Realised acoustparams extractor took 0 ms
+<?xml version="1.0" encoding="UTF-8"?><maryxml xmlns="http://mary.dfki.de/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="de">
+<p>
+<s>
+<phrase>
+<t g2p_method="lexicon" ph="' j E ts t" pos="ADV">
+jetzt
+<syllable ph="j E ts t" stress="1">
+<ph d="90" end="0.09" f0="(6,164)(12,164)(18,163)(25,161)(31,161)(37,161)(43,161)(50,161)(56,161)(62,161)(68,161)(75,162)(81,162)(87,163)(93,163)(100,162)" p="j"/>
+<ph d="80" end="0.17000002" f0="(6,159)(12,157)(18,154)(25,147)(31,146)(37,144)(43,142)(50,140)(56,136)(62,133)(68,130)(75,126)(81,124)(87,122)(93,120)(100,118)" p="E"/>
+<ph d="225" end="0.39500004" f0="" p="ts"/>
+<ph d="165" end="0.56000006" f0="" p="t"/>
+</syllable>
+</t>
+<boundary breakindex="5" duration="155" tone="L-%"/>
+</phrase>
+</s>
+</p>
+</maryxml>
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+HMM speech generation with mixed-excitation.
+Pulse generated as a unit pulse.
+Postfiltering applied with beta=0.3
+playing a new stream marytts.util.data.audio.DDSAudioInputStream@34fe068b
+first samples
+completed n 104
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed a: 109
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed x 150
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed l 79
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed I 90
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed N 119
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed k 119
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed s 165
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed ? 59
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed I 90
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed n 140
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed h 119
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed U 59
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed n 135
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed d 45
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed 6 219
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed t 239
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed ? 125
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed a 109
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed x 155
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed t 129
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed ts 150
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed I 90
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed C 289
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed f 165
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed Y 94
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed n 85
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed f 174
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed ts 219
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed I 90
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed C 294
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed ts 234
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed v 50
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed a 135
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed n 79
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed ts 174
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed I 90
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed C 289
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed j 135
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed E 119
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed ts 230
+
+Global variance optimization
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+Global variance optimization
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (0)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (1)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (2)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (3)  number of iterations=1
+   optimization stopped by reaching max number of iterations (no global variance applied)
+Gradient GV optimization for feature: (4)  number of iterations=1
+completed t 100
+
+Shutting down modules...
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Module shut down.
+Shutdown complete.
