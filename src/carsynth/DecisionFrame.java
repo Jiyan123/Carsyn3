@@ -16,8 +16,9 @@ public class DecisionFrame extends JFrame
 	private static final long serialVersionUID = 111297707793705887L;
 	public CarSynthesisAbstract run = null;
 	CarVisualizer carVis = null;
+	final OsmandConnector osmConn = new OsmandConnector();
 	final String testString = "Nach links in";
-	int speed = 10;
+	int speed = 10; // in m/s
 	
 	public enum SynChooser {min, meter, run, wait};
 	SynChooser choosenSyn = SynChooser.min;
@@ -110,47 +111,115 @@ public class DecisionFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				synchronized(this)
+				synchronized(this)//if(!bRun)
 				{
-					if(bRun)return;
-					run = giveSynthInfo();
-					if(run != null)
+					if(!bRun)
 					{
 						bRun = true;
-						new Thread(new Runnable()
+						run = giveSynthInfo();
+						if(run != null)
 						{
-							MeterSimulator meterSim = new MeterSimulator(150);
-
-							@Override
-							public void run()
+							new Thread(new Runnable()
 							{
-								long meterVal;
-								carVis.setCollection(run.getSpeechValues());
-								while(true)
+								MeterSimulator meterSim = new MeterSimulator(150);
+
+								@Override
+								public void run()
 								{
-									meterVal = meterSim.getMeter(speed);
-									meterVal = meterVal <= 0 ? 0 : meterVal;
-									System.out.println(meterVal);
-									carVis.setMeter((int)meterVal);
-									carVis.repaint();
-									if(meterVal < 120 && speed > 0.0)
+									long meterVal;
+									carVis.setCollection(run.getSpeechValues());
+									while(true)
 									{
-										run.speak(meterVal,speed,testString);
-										if(!run.isSpeaking())
+										meterVal = meterSim.getMeter(speed);
+										meterVal = meterVal <= 0 ? 0 : meterVal;
+										System.out.println(meterVal);
+										carVis.setMeter((int)meterVal);
+										carVis.repaint();
+										if(meterVal < 120 && speed > 0.0)
 										{
-											bRun = false;
-											break;
+											run.speak(meterVal,speed,testString);
+											if(!run.isSpeaking())
+											{
+												bRun = false;
+												break;
+											}
 										}
 									}
 								}
-							}
-						}).start();
+							}).start();
+						}
+						else bRun = false;
 					}
 				}
 			}
-			
 		});
+		JButton osmButton = new JButton("Osmand");
+		osmButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				synchronized(this)//if(!bRun)
+				{
+					if(!bRun)
+					{
+						bRun = true;
+						
+						osmConn.connect();
+						osmConn.getConnValues();
+						run = giveSynthInfo(osmConn.turn);
+						if(run != null)
+						{
+							carVis.setCollection(run.getSpeechValues());
+							
+							new Thread(new Runnable()
+							{
+								@Override
+								public void run()
+								{
+									osmConn.bChanged=false;
+									while(true)
+									{
+										osmConn.getConnValues();
+										final long meterVal = osmConn.getMeter() <= 0 || osmConn.bChanged ? 0 : osmConn.getMeter();
+										System.out.println("Meter: " + meterVal);
+										carVis.setMeter((int)osmConn.getMeter());
+										carVis.repaint();
+										if(osmConn.bChanged)
+										{
+											for(int i = 0; i < 4;i++)System.out.println("--------------");
+										}
+										if(meterVal < 120 && osmConn.speed > 0.0)
+										{
+											run.speak(meterVal,osmConn.speed,osmConn.turn);
+											if(!run.isSpeaking())
+											{
+												System.out.println("Ende vom sprechen");
+												run = giveSynthInfo(osmConn.turn);
+												osmConn.bChanged = false;
+												//bRun = false;
+												//break;
+											}
+										}
+										else if(!run.isSpeaking() && osmConn.bChanged)
+										{
+											run = giveSynthInfo(osmConn.turn);
+											osmConn.bChanged = false;
+										}
+									}
+									
+									//bRun = false;
+								}
+							}).start();
+						}
+						//else 
+							bRun = false;
+					}
+				}
+			}
+		});
+
 		southPanel.add(simButton);
+		southPanel.add(osmButton);
 		mainPanel.add(southPanel,java.awt.BorderLayout.SOUTH);
 		
 		// Starte mit keinen Meterwerten, sondern hole diese später
@@ -175,6 +244,23 @@ public class DecisionFrame extends JFrame
 			return new SynthesisRunner(testString);
 		case wait:
 			return new SynthesisRunnerWait(testString);
+		default:
+			return null;
+		}
+	}
+	
+	private CarSynthesisAbstract giveSynthInfo(String turn)
+	{
+		switch(choosenSyn)
+		{
+		case min:
+			return new SynthesisMinimum(turn);
+		case meter:
+			return new SynthesisMeter(turn);
+		case run:
+			return new SynthesisRunner(turn);
+		case wait:
+			return new SynthesisRunnerWait(turn);
 		default:
 			return null;
 		}

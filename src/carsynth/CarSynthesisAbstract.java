@@ -89,6 +89,7 @@ public abstract class CarSynthesisAbstract
 	public void speak(long dist, double sp, String turn)
 	{
 		dist = dist > 0 ? dist : 0;
+		System.out.println(sp + " speak " + dist);
 		if((!isSpeaking) && (dist < oldDist || dist == 0) && sp > 0.0) // not good enough but for now
 		{
 			oldDist = dist;
@@ -270,8 +271,9 @@ public abstract class CarSynthesisAbstract
 		{
 			double t = (dist-nextDist) / (speed); // Zeit bis zum Ende
 			double fx = t/dur; // Faktor zum stretchen
-			if(fx > maxStretch)
+			if(fx > maxStretch || dist > mapper.get(actualChunk))
 			{
+				System.out.println("maxStart");
 				bMax = true;
 				fx = maxStretch;
 			}

@@ -63,16 +63,17 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 		bMin = false;
 		bMax = false;
 		ChunkIU u = getGroundChunk(s);
+		
 		if(u.equals(chunks.get(0))) // Turn Info
 		{
-			if(!theory)System.out.println("Anfang");
-			
+			if(!theory)System.out.println("Anfang");	
 			stretchChunk(dist,mapper.get(chunks.get(1)),s,theory);
 			
 			if(dur > 0)
 			{
 				if(!theory && !bMax)
 				{
+					if(bHold)System.out.println("OFF");
 					bHold = false;
 				}
 				
@@ -93,7 +94,9 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 					// es wird dann einfach abgebrochen und die sprachsynthese macht nach einer zeit weiter
 					if(!theory)
 					{
+						System.out.println("maximus");
 						bHold = true;
+						return;
 					}
 				}
 				u.getLastSegment().setAsTopNextSameLevelLink(chunks.get(1).getFirstSegment().toPayLoad());
@@ -117,6 +120,7 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 			{
 				if(!bMax && !theory)
 				{
+					if(bHold)System.out.println("OFF");
 					bHold = false;
 				}
 				
@@ -131,10 +135,13 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 				// wenn stretch wert min dann halte an
 				if(bMax)
 				{
+					System.out.println("----");
 					// es wird dann einfach abgebrochen und die sprachsynthese macht nach einer zeit weiter
 					if(!theory)
 					{
+						System.out.println("maximus");
 						bHold = true;
+						return;
 					}
 				}
 				u.getLastSegment().setAsTopNextSameLevelLink(chunks.get(nextIndex).getFirstSegment().toPayLoad());
@@ -179,8 +186,10 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 					p = updatedIU.getProgress();
 					if(p == Progress.COMPLETED)
 					{
+						System.out.println("BEE");
 						if(bHold)
 						{
+							System.out.println("Hold");
 							referedSys = (SysSegmentIU)updatedIU;
 							dispatcher.interruptPlayback();
 							if(updatedIU.getNextSameLevelLink() == null)
