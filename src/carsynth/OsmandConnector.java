@@ -155,11 +155,47 @@ public class OsmandConnector
 	public String translate(String value)
 	{
 		String ret = new String(value);
+		/*
 		value.replace("Turn", "Biege");
 		value.replace("sharply", "scharf");
 		value.replace("slightly", "leicht");
 		value.replace("left", "links ab in");
 		value.replace("right", "rechts ab in");
+		ms.equals("Go ahead")||
+				ms.equals("Turn slightly left")||
+				ms.equals("Turn left")||
+				ms.equals("Turn sharply left")||
+				ms.equals("Turn slightly right")||
+				ms.equals("Turn right")||
+				ms.equals("Turn sharply right")||
+				ms.equals("Make uturn")||
+				ms.equals("Keep left")||
+				ms.equals("Keep right"))
+		*/
+		switch(value)
+		{
+		case "Go ahead":
+			ret = "Geradeaus in";
+			break;
+		case "Turn sharply left":
+			ret = "Scharf links abbiegen in";
+			break;
+		case "Turn sharply right":
+			ret = "Scharf rechts abbiegen in";
+			break;
+		case "Turn slightly left":
+			ret = "Leicht links abbiegen in";
+			break;
+		case "Turn slightly right":
+			ret = "Leicht rechts abbiegen in";
+			break;
+		case "Turn left":
+			ret = "Links abbiegen in";
+			break;
+		case "Turn right":
+			ret = "Rechts abbiegen in";
+			break;
+		}
 		return ret;
 	}
 	

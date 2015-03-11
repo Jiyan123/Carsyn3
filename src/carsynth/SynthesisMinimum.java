@@ -1,5 +1,4 @@
 package carsynth;
-
 import inpro.incremental.unit.ChunkIU;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.WordIU;
@@ -7,7 +6,6 @@ import inpro.incremental.unit.IU.IUUpdateListener;
 import inpro.incremental.unit.IU.Progress;
 import inpro.incremental.unit.SysSegmentIU;
 import inpro.synthesis.MaryAdapter;
-
 /**
  * Diese Synthese klappert einfach die Ansagen durch, ohne zB ein "Meter"
  * oder andere "Hesitation" einzuschieben, es geht hier nur darum die Ansagen
@@ -19,7 +17,6 @@ import inpro.synthesis.MaryAdapter;
 public class SynthesisMinimum extends CarSynthesisAbstract
 {
 	protected boolean bHold = false;
-	
 	/**
 	 * Während des wartens darauf, dass die Synthese weitermacht,
 	 * kann getOngoingSegment(WordIU) nicht das entsprende Segment
@@ -29,12 +26,10 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 	 * wo es weiter geht (wenn referedSys nicht null ist).
 	 */
 	protected SysSegmentIU referedSys = null;
-	
 	public SynthesisMinimum(String turn)
 	{
 		super(turn);
 	}
-	
 	@Override
 	protected void setInst(String turn, long meter)
 	{
@@ -43,19 +38,20 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 		groundChunk(turnChunk);
 		chunks.add(turnChunk);
 		mapper.put( turnChunk , (int)meter);
-		
 		chunkIt("hundert",100);
 		chunkIt("achtzig",80);
 		chunkIt("fünfzig",50);
 		chunkIt("zwanzig",20);
 		chunkIt("jetzt",5); // hat noch meter, muss aber nicht haben
-		
 		for(ChunkIU it : chunks)
 		{
-			it.getLastSegment().addUpdateListener(getNewListener());
+			// Das "Jetzt" Chunk soll nicht stoppen
+			if(!it.equals(chunks.get(chunks.size())))
+			{
+				it.getLastSegment().addUpdateListener(getNewListener());
+			}
 		}
 	}
-	
 	@Override
 	protected void planMeters(long dist, double sp, SysSegmentIU s, boolean theory, boolean hesIsSet)
 	{
@@ -63,20 +59,16 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 		bMin = false;
 		bMax = false;
 		ChunkIU u = getGroundChunk(s);
-		
 		if(u.equals(chunks.get(0))) // Turn Info
 		{
-			if(!theory)System.out.println("Anfang");	
+			if(!theory)System.out.println("Anfang");
 			stretchChunk(dist,mapper.get(chunks.get(1)),s,theory);
-			
 			if(dur > 0)
 			{
 				if(!theory && !bMax)
 				{
-					if(bHold)System.out.println("OFF");
 					bHold = false;
 				}
-				
 				// wenn max setze sll
 				if(bMin)
 				{
@@ -84,19 +76,16 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 					planMeters((long)(dist-sp*dur),sp,(SysSegmentIU) getNextMeterChunk((int) ((int)dist-dur*sp)).getFirstSegment(),true,hesIsSet);
 					return;
 				}
-
 				/* wenn stretch wert min dann ist halt die Frage was zu machen ist ...
-				 hab mich hier entschlossen einfach die Turn ansage abzuspielen
-				  und ...
-				*/
+				hab mich hier entschlossen einfach die Turn ansage abzuspielen
+				und ...
+				 */
 				if(bMax)
 				{
 					// es wird dann einfach abgebrochen und die sprachsynthese macht nach einer zeit weiter
 					if(!theory)
 					{
-						System.out.println("maximus");
 						bHold = true;
-						return;
 					}
 				}
 				u.getLastSegment().setAsTopNextSameLevelLink(chunks.get(1).getFirstSegment().toPayLoad());
@@ -106,7 +95,6 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 		else if(chunks.indexOf(u) > 0 && chunks.indexOf(u) < chunks.size()) // Count Info
 		{
 			if(!theory)System.out.println("Counter");
-			
 			int nextIndex = chunks.indexOf(u)+1;
 			if(nextIndex >= chunks.size())
 			{
@@ -115,15 +103,12 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 				return;
 			}
 			stretchChunk(dist,mapper.get(chunks.get(nextIndex)),s,theory);
-			
 			if(dur>0)
 			{
 				if(!bMax && !theory)
 				{
-					if(bHold)System.out.println("OFF");
 					bHold = false;
 				}
-				
 				// wenn max setze sll
 				if(bMin)
 				{
@@ -131,17 +116,13 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 					planMeters((long)(dist-sp*dur),sp,(SysSegmentIU) getNextMeterChunk((int) ((int)dist-dur*sp)).getFirstSegment(),true,hesIsSet);
 					return;
 				}
-				
 				// wenn stretch wert min dann halte an
 				if(bMax)
 				{
-					System.out.println("----");
 					// es wird dann einfach abgebrochen und die sprachsynthese macht nach einer zeit weiter
 					if(!theory)
 					{
-						System.out.println("maximus");
 						bHold = true;
-						return;
 					}
 				}
 				u.getLastSegment().setAsTopNextSameLevelLink(chunks.get(nextIndex).getFirstSegment().toPayLoad());
@@ -153,31 +134,26 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 			System.out.println("Fehler");
 		}
 	}
-	
 	protected void chunkIt(String name, int meterVal)
 	{
 		ChunkIU commandmentChunk = new ChunkIU(name);
 		commandmentChunk.groundIn(MaryAdapter.getInstance().text2IUs(name));
 		groundChunk(commandmentChunk);
-		
 		chunks.get(chunks.size()-1).getLastSegment().addNextSameLevelLink(commandmentChunk.getFirstSegment());
 		chunks.add(commandmentChunk);
 		mapper.put(commandmentChunk,meterVal);
 	}
-	
 	@Override
 	protected SysSegmentIU getOngoingSegment(WordIU param)
 	{
 		if(referedSys != null)return referedSys;
 		return super.getOngoingSegment(param);
 	}
-	
 	protected IUUpdateListener getNewListener()
 	{
 		return new IUUpdateListener()
 		{
 			Progress p;
-
 			@Override
 			public void update(IU updatedIU)
 			{
@@ -186,10 +162,8 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 					p = updatedIU.getProgress();
 					if(p == Progress.COMPLETED)
 					{
-						System.out.println("BEE");
 						if(bHold)
 						{
-							System.out.println("Hold");
 							referedSys = (SysSegmentIU)updatedIU;
 							dispatcher.interruptPlayback();
 							if(updatedIU.getNextSameLevelLink() == null)
@@ -206,7 +180,6 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 									e.printStackTrace();
 								}
 							}
-
 							referedSys = null;
 							bHold = false;
 							dispatcher.continuePlayback();
@@ -214,8 +187,6 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 					}
 				}
 			}
-
 		};
 	}
-
 }

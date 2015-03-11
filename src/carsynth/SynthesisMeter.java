@@ -4,6 +4,11 @@ import inpro.incremental.unit.ChunkIU;
 import inpro.incremental.unit.SysSegmentIU;
 import inpro.synthesis.MaryAdapter;
 
+/**
+ * 
+ * @author jiyan
+ *
+ */
 public class SynthesisMeter extends SynthesisMinimum
 {
 	

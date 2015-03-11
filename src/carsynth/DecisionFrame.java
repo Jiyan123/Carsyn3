@@ -24,6 +24,7 @@ public class DecisionFrame extends JFrame
 	SynChooser choosenSyn = SynChooser.min;
 	
 	JPanel mainPanel = new JPanel();
+	InfoPanel midPanel = new InfoPanel(choosenSyn);
 	
 	boolean bRun = false;
 	
@@ -64,6 +65,7 @@ public class DecisionFrame extends JFrame
 			public void actionPerformed(ActionEvent arg0)
 			{
 				choosenSyn = SynChooser.min;
+				midPanel.calculateSynText(choosenSyn);
 			}
 			
 		});
@@ -74,6 +76,7 @@ public class DecisionFrame extends JFrame
 			public void actionPerformed(ActionEvent arg0)
 			{
 				choosenSyn = SynChooser.meter;
+				midPanel.calculateSynText(choosenSyn);
 			}
 			
 		});
@@ -83,6 +86,7 @@ public class DecisionFrame extends JFrame
 			public void actionPerformed(ActionEvent arg0)
 			{
 				choosenSyn = SynChooser.run;
+				midPanel.calculateSynText(choosenSyn);
 			}
 			
 		});
@@ -93,6 +97,7 @@ public class DecisionFrame extends JFrame
 			public void actionPerformed(ActionEvent arg0)
 			{
 				choosenSyn = SynChooser.wait;
+				midPanel.calculateSynText(choosenSyn);
 			}
 			
 		});
@@ -191,7 +196,7 @@ public class DecisionFrame extends JFrame
 										if(meterVal < 120 && osmConn.speed > 0.0)
 										{
 											run.speak(meterVal,osmConn.speed,osmConn.turn);
-											if(!run.isSpeaking())
+											if(!run.isSpeaking()&&osmConn.bChanged)
 											{
 												System.out.println("Ende vom sprechen");
 												run = giveSynthInfo(osmConn.turn);
@@ -212,7 +217,7 @@ public class DecisionFrame extends JFrame
 							}).start();
 						}
 						//else 
-							bRun = false;
+						bRun = false;
 					}
 				}
 			}
@@ -221,11 +226,12 @@ public class DecisionFrame extends JFrame
 		southPanel.add(simButton);
 		southPanel.add(osmButton);
 		mainPanel.add(southPanel,java.awt.BorderLayout.SOUTH);
+		mainPanel.add(midPanel,java.awt.BorderLayout.CENTER);
 		
 		// Starte mit keinen Meterwerten, sondern hole diese später
 		ArrayList<Integer> meterCommands = new ArrayList<Integer>();
 		carVis = new CarVisualizer(50, meterCommands);
-		mainPanel.add(carVis,java.awt.BorderLayout.CENTER);
+		mainPanel.add(carVis,java.awt.BorderLayout.WEST);
 		this.getContentPane().add(mainPanel);
 		
 		pack();

@@ -271,9 +271,10 @@ public abstract class CarSynthesisAbstract
 		{
 			double t = (dist-nextDist) / (speed); // Zeit bis zum Ende
 			double fx = t/dur; // Faktor zum stretchen
-			if(fx > maxStretch || dist > mapper.get(actualChunk))
+			boolean bMap = false;
+			if(chunks.contains(actualChunk) && (!actualChunk.equals(chunks.get(0))))bMap= dist > mapper.get(actualChunk);
+			if(fx > maxStretch || bMap)
 			{
-				System.out.println("maxStart");
 				bMax = true;
 				fx = maxStretch;
 			}
