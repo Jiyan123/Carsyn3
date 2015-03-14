@@ -1,11 +1,14 @@
 package carsynth;
 
+import java.util.List;
+
 import inpro.incremental.unit.ChunkIU;
 import inpro.incremental.unit.SysSegmentIU;
 import inpro.synthesis.MaryAdapter;
 
 /**
- * 
+ * Arbeitet wiede SynthesisMinimum, aber schiebt noch
+ * ein Meter bei Bedarf ein, welches gestrecht werden kann
  * @author jiyan
  *
  */
@@ -15,23 +18,6 @@ public class SynthesisMeter extends SynthesisMinimum
 	public SynthesisMeter(String turn)
 	{
 		super(turn);
-	}
-
-	@Override
-	protected void setInst(String turn, long meter)
-	{
-		ChunkIU turnChunk = new ChunkIU(turn);
-		turnChunk.groundIn(MaryAdapter.getInstance().text2IUs(turn));
-		groundChunk(turnChunk);
-		chunks.add(turnChunk);
-		mapper.put( turnChunk , (int)meter);
-		
-		chunkIt("hundert",100);
-		chunkIt("achtzig",80);
-		chunkIt("fünfzig",50);
-		chunkIt("zwanzig",20);
-		chunkIt("jetzt",5); // hat noch meter, muss aber nicht haben
-		
 		for(ChunkIU  u: chHes)
 		{
 			if(u.getWord().equals("Meter"))
@@ -46,7 +32,25 @@ public class SynthesisMeter extends SynthesisMinimum
 		}
 		chunks.get(0).getLastSegment().addUpdateListener(getNewListener());
 	}
-
+	
+	public SynthesisMeter(String turn, List<Integer> counts, List<String> commands)
+	{
+		super(turn, counts,commands);
+		for(ChunkIU  u: chHes)
+		{
+			if(u.getWord().equals("Meter"))
+			{
+				int nextInd = chHes.indexOf(u)+2;
+				if(nextInd < chunks.size())setSLL(u,chunks.get(nextInd),true);
+			}
+		}
+		for(ChunkIU it : chHes)
+		{
+			it.getLastSegment().addUpdateListener(getNewListener());
+		}
+		chunks.get(0).getLastSegment().addUpdateListener(getNewListener());
+	}
+	
 	@Override
 	protected void planMeters(long dist, double sp, SysSegmentIU s,
 			boolean theory, boolean hesIsSet)
@@ -175,6 +179,7 @@ public class SynthesisMeter extends SynthesisMinimum
 
 	}
 	
+	@Override
 	protected void chunkIt(String name, int meterVal)
 	{
 		super.chunkIt(name, meterVal);

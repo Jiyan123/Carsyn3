@@ -22,8 +22,8 @@ public class CarVisualizer extends JPanel
 	private int meter;
 	private Collection<Integer> subPoints;
 	
-	private final int carX = 34;
-	private final int carY = 77;
+	private static final int carX = 34;
+	private static final int carY = 77;
 	
 	public CarVisualizer(int maxVal, Collection<Integer> sPoints)
 	{

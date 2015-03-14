@@ -12,15 +12,15 @@ import java.util.Date;
 
 public class OsmandConnector
 {
-	public String turn = new String();
-	public String street = new String();
-	public double lat;
-	public double lon;
+	private String turn = new String();
+	private String street = new String();
+	private double lat;
+	private double lon;
 	private long meter;
-	public double speed;
-	public Date lastDate;
+	private double speed = 0;
+	private Date lastDate;
 	
-	public boolean bChanged = false;
+	private boolean bChanged = false;
 	Socket echoSocket = null;
 	
 	public OsmandConnector()
@@ -115,7 +115,12 @@ public class OsmandConnector
 					long oldMeter = meter;
 					meter = Long.parseLong(ms.substring(0, ms.indexOf('m')));//Long.valueOf(ms.substring(0, ms.length()-2));
 					Date newDate = new Date();
-					speed = ((1000*(oldMeter-meter))/(newDate.getTime()-lastDate.getTime()));
+					if(oldMeter >= meter)
+					{
+						speed = ((1000*(oldMeter-meter))/(newDate.getTime()-lastDate.getTime()));
+						System.out.println(">>>>>"+speed);
+						Math.abs(speed);
+					}
 					//System.out.println(oldMeter-meter + " Zeit " + (newDate.getTime()-lastDate.getTime()) + " sp " + speed);
 					lastDate = newDate;
 					
@@ -195,6 +200,12 @@ public class OsmandConnector
 		case "Turn right":
 			ret = "Rechts abbiegen in";
 			break;
+		case "Keep left":
+			ret = "Links halten für";
+			break;
+		case "Keep right":
+			ret = "Rechts halten für";
+			break;
 		}
 		return ret;
 	}
@@ -215,6 +226,7 @@ public class OsmandConnector
 		char[] buffer = new char[200];
 		int anzahlZeichen = bufferedReader.read(buffer, 0, 200); // blockiert bis Nachricht empfangen
 		String nachricht = new String(buffer, 0, anzahlZeichen);
+		System.out.println("SERVER>" + nachricht);
 		return nachricht;
 	}
 	private boolean giveTurn(String ms)
@@ -235,8 +247,28 @@ public class OsmandConnector
 		return false;
 	}
 	
-	long getMeter()
+	public long getMeter()
 	{
 		return meter;
+	}
+	
+	public String getTurn()
+	{
+		return turn;
+	}
+	
+	public boolean isChanged()
+	{
+		return bChanged;
+	}
+	
+	public void setChanged(boolean val)
+	{
+		bChanged = val;
+	}
+	
+	public double getSpeed()
+	{
+		return speed;
 	}
 }

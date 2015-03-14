@@ -6,11 +6,21 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+/**
+ * Die Start Klasse, besteht aus einem CarVisualizer und einem InfoPanel,
+ * es werden die Synthesen bereitgestellt und je nachdem, was bei der
+ * Ausführung einer Synthese benötigt wird, wird bei Simulation der
+ * MeterSimulator ausgeführt, oder der OsmandConnector bei Verbindung zu
+ * Osmand.
+ * @author jiyan
+ *
+ */
 public class DecisionFrame extends JFrame
 {
 	private static final long serialVersionUID = 111297707793705887L;
@@ -30,6 +40,7 @@ public class DecisionFrame extends JFrame
 	
 	public DecisionFrame()
 	{
+		this.setTitle("Synthesen-Auswahl");
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		mainPanel.setLayout( new java.awt.BorderLayout() );
 		JSlider slider = new JSlider(JSlider.HORIZONTAL,
@@ -171,7 +182,8 @@ public class DecisionFrame extends JFrame
 						
 						osmConn.connect();
 						osmConn.getConnValues();
-						run = giveSynthInfo(osmConn.turn);
+						run = giveSynthInfo(osmConn.getTurn());
+						
 						if(run != null)
 						{
 							carVis.setCollection(run.getSpeechValues());
@@ -181,34 +193,39 @@ public class DecisionFrame extends JFrame
 								@Override
 								public void run()
 								{
-									osmConn.bChanged=false;
+									osmConn.setChanged(false);
 									while(true)
 									{
 										osmConn.getConnValues();
-										final long meterVal = osmConn.getMeter() <= 0 || osmConn.bChanged ? 0 : osmConn.getMeter();
+										final long meterVal = osmConn.getMeter() <= 0 || osmConn.isChanged() ?
+												0 : osmConn.getMeter();
 										System.out.println("Meter: " + meterVal);
-										carVis.setMeter((int)osmConn.getMeter());
+										carVis.setMeter((int)meterVal);
 										carVis.repaint();
-										if(osmConn.bChanged)
+										
+										if(osmConn.isChanged())
 										{
 											for(int i = 0; i < 4;i++)System.out.println("--------------");
 										}
-										if(meterVal < 120 && osmConn.speed > 0.0)
+										System.out.println(meterVal + " " + osmConn.getSpeed());
+										if(meterVal < 120 && osmConn.getSpeed() > 0.0)
 										{
-											run.speak(meterVal,osmConn.speed,osmConn.turn);
-											if(!run.isSpeaking()&&osmConn.bChanged)
+											System.out.println("SPEAK");
+											
+											run.speak(meterVal,osmConn.getSpeed(),osmConn.getTurn());
+											if(!run.isSpeaking()&&osmConn.isChanged())
 											{
 												System.out.println("Ende vom sprechen");
-												run = giveSynthInfo(osmConn.turn);
-												osmConn.bChanged = false;
+												run = giveSynthInfo(osmConn.getTurn());
+												osmConn.setChanged(false);
 												//bRun = false;
 												//break;
 											}
 										}
-										else if(!run.isSpeaking() && osmConn.bChanged)
+										else if(!run.isSpeaking() && osmConn.isChanged())
 										{
-											run = giveSynthInfo(osmConn.turn);
-											osmConn.bChanged = false;
+											run = giveSynthInfo(osmConn.getTurn());
+											osmConn.setChanged(false);
 										}
 									}
 									
@@ -240,35 +257,71 @@ public class DecisionFrame extends JFrame
 	
 	private CarSynthesisAbstract giveSynthInfo()
 	{
-		switch(choosenSyn)
-		{
-		case min:
-			return new SynthesisMinimum(testString);
-		case meter:
-			return new SynthesisMeter(testString);
-		case run:
-			return new SynthesisRunner(testString);
-		case wait:
-			return new SynthesisRunnerWait(testString);
-		default:
-			return null;
-		}
+		return giveSynthInfo(testString);
 	}
 	
 	private CarSynthesisAbstract giveSynthInfo(String turn)
 	{
-		switch(choosenSyn)
+		if(midPanel.isOwnChunks())
 		{
-		case min:
-			return new SynthesisMinimum(turn);
-		case meter:
-			return new SynthesisMeter(turn);
-		case run:
-			return new SynthesisRunner(turn);
-		case wait:
-			return new SynthesisRunnerWait(turn);
-		default:
-			return null;
+			try
+			{
+				switch(choosenSyn)
+				{
+				case min:
+					return new SynthesisMinimum(turn,midPanel.getIntList(),midPanel.getStringList());
+				case meter:
+					return new SynthesisMeter(turn,midPanel.getIntList(),midPanel.getStringList());
+				case run:
+					return new SynthesisRunner(turn,midPanel.getIntList(),midPanel.getStringList());
+				case wait:
+					if(midPanel.isWait())
+					{
+						return new SynthesisRunnerWait(turn,midPanel.getWaitNumber(),midPanel.getIntList(),midPanel.getStringList());
+					}
+					else
+					{
+						return new SynthesisRunnerWait(turn, midPanel.getIntList(), midPanel.getStringList());
+					}
+				default:
+					return null;
+				}
+			}
+			catch(NumberFormatException e)
+			{
+				JOptionPane.showMessageDialog(null, "Das Eingegebene Format ist ungültig, " +
+						"eventuell gibt es auch ein Windowsspezifisches Zeilenumbruchsproblem, " +
+						"verwende das Format:\n" +
+						"100-hundert\n" +
+						"80-achtzig\n" +
+						"50-fünfzig\n" +
+						"20-zwanzig\n" +
+						"5-hier");
+				return null;
+			}
+		}
+		else
+		{
+			switch(choosenSyn)
+			{
+			case min:
+				return new SynthesisMinimum(turn);
+			case meter:
+				return new SynthesisMeter(turn);
+			case run:
+				return new SynthesisRunner(turn);
+			case wait:
+				if(midPanel.isWait())
+				{
+					return new SynthesisRunnerWait(turn, midPanel.getWaitNumber());
+				}
+				else
+				{
+					return new SynthesisRunnerWait(turn);
+				}
+			default:
+				return null;
+			}
 		}
 	}
 	

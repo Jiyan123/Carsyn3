@@ -1,11 +1,20 @@
 package carsynth;
 
+import java.util.List;
+
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.SysSegmentIU;
 import inpro.incremental.unit.WordIU;
 import inpro.incremental.unit.IU.IUUpdateListener;
 import inpro.incremental.unit.IU.Progress;
 
+/**
+ * Arbeitet wie SynthesisRunner nur bricht nach einer
+ * Anzahl von "äh nun ja" ab und wartet auf einen
+ * Meterwert, welcher weitere Ausgabe ermöglicht
+ * @author jiyan
+ *
+ */
 public class SynthesisRunnerWait extends SynthesisRunner
 {
 	/**
@@ -33,6 +42,18 @@ public class SynthesisRunnerWait extends SynthesisRunner
 	public SynthesisRunnerWait(String turn, int hes)
 	{
 		super(turn);
+		numberHes = hes;
+	}
+	
+	public SynthesisRunnerWait(String turn, List<Integer> counts, List<String> commands)
+	{
+		super(turn, counts,commands);
+		numberHes = 3;
+	}
+	
+	public SynthesisRunnerWait(String turn, int hes, List<Integer> counts, List<String> commands)
+	{
+		super(turn, counts,commands);
 		numberHes = hes;
 	}
 	

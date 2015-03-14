@@ -1,5 +1,6 @@
 package carsynth;
 
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
@@ -25,19 +26,21 @@ public class InfoPanel extends JPanel
 	JCheckBox chunkBox = new JCheckBox("Eigene Chunks");
 	JCheckBox waitBox = new JCheckBox("Runner Wert");
 	JTextArea area = new JTextArea(2,30);
-	SpinnerNumberModel spinnerModel = new SpinnerNumberModel(3,0,1000,1);
-
-	
-	boolean ownChunks = false;
-	boolean wait = false;
+	JSpinner spinner;
 	
 	public InfoPanel(SynChooser syn)
 	{
 		this.setLayout(new BorderLayout());
-		northPanel.setLayout(new GridLayout(1,2));
+		northPanel.setLayout(new GridLayout(1,3));
+		northPanel.add(new JLabel("Gewählte Synthese: "));
 		northPanel.add(synthText);
-		JSpinner spinner = new JSpinner(spinnerModel);
-		northPanel.add(spinner);
+		JPanel northHelpPanel = new JPanel();
+		northHelpPanel.setLayout(new FlowLayout());
+		northHelpPanel.add(new JLabel("Wait Zähler"));
+		SpinnerNumberModel spinnerModel = new SpinnerNumberModel(3,0,1000,1);
+		spinner = new JSpinner(spinnerModel);
+		northHelpPanel.add(spinner);
+		northPanel.add(northHelpPanel);
 		this.add(northPanel,BorderLayout.NORTH);
 		area.setText("100-100\n"+
 				"80-80\n"+
@@ -79,6 +82,11 @@ public class InfoPanel extends JPanel
 			ret.add(Integer.parseInt(tok[0]));
 		}
 		return ret;
+	}
+	
+	public int getWaitNumber()
+	{
+		return (int) spinner.getValue();
 	}
 	
 	public boolean isWait()

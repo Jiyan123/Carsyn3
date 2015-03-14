@@ -17,10 +17,19 @@ import inpro.incremental.unit.SysSegmentIU;
 import inpro.incremental.unit.WordIU;
 import inpro.incremental.unit.IU.IUUpdateListener;
 import inpro.incremental.unit.IU.Progress;
+import inpro.synthesis.MaryAdapter;
 import inpro.synthesis.MaryAdapter5internal;
 import inpro.synthesis.hts.IUBasedFullPStream;
 import inpro.synthesis.hts.VocodingAudioStream;
 
+/**
+ * Abstrakte Synthese-Klasse von der alle anderen Synthesen
+ * abgelitten werden.
+ * chunkIt() und planMeters() sind abstrakte Methoden,
+ * preProcess() wird bei Bedarf überschrieben
+ * @author jiyan
+ *
+ */
 public abstract class CarSynthesisAbstract
 {
 	/**
@@ -55,12 +64,38 @@ public abstract class CarSynthesisAbstract
 	/** audio stream that we dispatch to */
 	protected DispatchStream dispatcher;
 	
+	boolean bAround = false;
+	
 	/** set up the synthesis */
 	public CarSynthesisAbstract(String turn)
 	{
 		// get an output object that plays back on the speakers/headphone
 		dispatcher = SimpleMonitor.setupDispatcher();
+		preProcess(turn, 120);
+		
 		setInst(turn,120);
+		((SysSegmentIU)(chunks.get(chunks.size()-1).getLastSegment())).addUpdateListener(new IUUpdateListener()
+		{
+
+			@Override
+			public void update(IU updatedIU)
+			{
+				if(updatedIU.getProgress() == Progress.COMPLETED)
+				{
+					isSpeaking = false;
+					bAround = true;
+				}
+			}
+		});
+	}
+	
+	public CarSynthesisAbstract(String turn, List<Integer> counts, List<String> commands)
+	{
+		// get an output object that plays back on the speakers/headphone
+		dispatcher = SimpleMonitor.setupDispatcher();
+		preProcess(turn, 120);
+		
+		setInst(turn,120,counts,commands);
 		((SysSegmentIU)(chunks.get(chunks.size()-1).getLastSegment())).addUpdateListener(new IUUpdateListener()
 		{
 
@@ -75,7 +110,40 @@ public abstract class CarSynthesisAbstract
 		});
 	}
 	
-	abstract protected void setInst(String turn, long meter);
+	private void setInst(String turn, long meter)
+	{
+		chunkIt("hundert",100);
+		chunkIt("achtzig",80);
+		chunkIt("fünfzig",50);
+		chunkIt("zwanzig",20);
+		chunkIt("jetzt",5); // hat noch meter, muss aber nicht haben
+	}
+	
+	private void setInst(String turn, long meter, List<Integer> counts,List<String> commands)
+	{
+		if((counts.size() == commands.size()))
+		{
+			for(int i = 0; i < commands.size();i++)
+			{
+				chunkIt(commands.get(i),Integer.valueOf(counts.get(i)));
+			}
+		}
+		else
+		{
+			setInst(turn, meter);
+		}
+	}
+	
+	protected void preProcess(String turn, long meter)
+	{
+		ChunkIU turnChunk = new ChunkIU(turn);
+		turnChunk.groundIn(MaryAdapter.getInstance().text2IUs(turn));
+		groundChunk(turnChunk);
+		chunks.add(turnChunk);
+		mapper.put( turnChunk , (int)meter);
+	}
+	
+	protected abstract void chunkIt(String name, int meterVal);
 	
 	/**
 	 * Die Methode welche aufgerufen wird wenn eine neue Information über
@@ -90,6 +158,7 @@ public abstract class CarSynthesisAbstract
 	{
 		dist = dist > 0 ? dist : 0;
 		System.out.println(sp + " speak " + dist);
+		if(bAround)return;
 		if((!isSpeaking) && (dist < oldDist || dist == 0) && sp > 0.0) // not good enough but for now
 		{
 			oldDist = dist;
@@ -187,6 +256,7 @@ public abstract class CarSynthesisAbstract
 	 */
 	protected void setSLL(WordIU from, WordIU to, boolean setTopSLL)
 	{
+		if(from.equals(chunks.size()-1))return;
 		if(!(from.getLastSegment().getNextSameLevelLinks().contains(to.getFirstSegment())))
 		{
 			from.getLastSegment().addNextSameLevelLink(to.getFirstSegment());

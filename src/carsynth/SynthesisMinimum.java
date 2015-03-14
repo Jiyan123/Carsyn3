@@ -1,4 +1,6 @@
 package carsynth;
+import java.util.List;
+
 import inpro.incremental.unit.ChunkIU;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.WordIU;
@@ -26,32 +28,33 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 	 * wo es weiter geht (wenn referedSys nicht null ist).
 	 */
 	protected SysSegmentIU referedSys = null;
+	
 	public SynthesisMinimum(String turn)
 	{
 		super(turn);
-	}
-	@Override
-	protected void setInst(String turn, long meter)
-	{
-		ChunkIU turnChunk = new ChunkIU(turn);
-		turnChunk.groundIn(MaryAdapter.getInstance().text2IUs(turn));
-		groundChunk(turnChunk);
-		chunks.add(turnChunk);
-		mapper.put( turnChunk , (int)meter);
-		chunkIt("hundert",100);
-		chunkIt("achtzig",80);
-		chunkIt("fünfzig",50);
-		chunkIt("zwanzig",20);
-		chunkIt("jetzt",5); // hat noch meter, muss aber nicht haben
 		for(ChunkIU it : chunks)
 		{
 			// Das "Jetzt" Chunk soll nicht stoppen
-			if(!it.equals(chunks.get(chunks.size())))
+			if(!it.equals(chunks.get(chunks.size()-1)))
 			{
 				it.getLastSegment().addUpdateListener(getNewListener());
 			}
 		}
 	}
+	
+	public SynthesisMinimum(String turn, List<Integer> counts, List<String> commands)
+	{
+		super(turn, counts,commands);
+		for(ChunkIU it : chunks)
+		{
+			// Das "Jetzt" Chunk soll nicht stoppen
+			if(!it.equals(chunks.get(chunks.size()-1)))
+			{
+				it.getLastSegment().addUpdateListener(getNewListener());
+			}
+		}
+	}
+	
 	@Override
 	protected void planMeters(long dist, double sp, SysSegmentIU s, boolean theory, boolean hesIsSet)
 	{
@@ -134,6 +137,8 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 			System.out.println("Fehler");
 		}
 	}
+	
+	@Override
 	protected void chunkIt(String name, int meterVal)
 	{
 		ChunkIU commandmentChunk = new ChunkIU(name);
@@ -143,12 +148,14 @@ public class SynthesisMinimum extends CarSynthesisAbstract
 		chunks.add(commandmentChunk);
 		mapper.put(commandmentChunk,meterVal);
 	}
+	
 	@Override
 	protected SysSegmentIU getOngoingSegment(WordIU param)
 	{
 		if(referedSys != null)return referedSys;
 		return super.getOngoingSegment(param);
 	}
+	
 	protected IUUpdateListener getNewListener()
 	{
 		return new IUUpdateListener()

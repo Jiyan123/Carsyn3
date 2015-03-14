@@ -1,5 +1,7 @@
 package carsynth;
 
+import java.util.List;
+
 import inpro.incremental.unit.ChunkIU;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.IU.IUUpdateListener;
@@ -28,30 +30,6 @@ public class SynthesisRunner extends CarSynthesisAbstract
 	public SynthesisRunner(String turn)
 	{
 		super(turn);
-	}
-	
-	@Override
-	protected void setInst(String turn, long meter)
-	{
-		ChunkIU turnChunk = new ChunkIU(turn);
-		turnChunk.groundIn(MaryAdapter.getInstance().text2IUs(turn));
-		groundChunk(turnChunk);
-		chunks.add(turnChunk);
-		mapper.put( turnChunk , (int)meter);
-		
-		addHes();
-		
-		copHes = new ChunkIU("äh nun ja");
-		copHes.groundIn(MaryAdapter.getInstance().text2IUs("äh nun ja"));
-		groundChunk(copHes);
-		
-		for(SegmentIU i : copHes.getSegments())((SysSegmentIU)i).stretchFromOriginal(maxStretch);
-		
-		chunkIt("hundert",100);
-		chunkIt("achtzig",80);
-		chunkIt("fünfzig",50);
-		chunkIt("zwanzig",20);
-		chunkIt("jetzt",5); // hat noch meter, muss aber nicht haben
 		
 		for(ChunkIU  u: chHes)
 		{
@@ -60,6 +38,38 @@ public class SynthesisRunner extends CarSynthesisAbstract
 				int nextInd = getNextIndex(u);
 				setSLL(u,chunks.get(nextInd),true);
 			}
+		}
+	}
+	
+	public SynthesisRunner(String turn, List<Integer> counts, List<String> commands)
+	{
+		super(turn, counts,commands);
+		
+		for(ChunkIU  u: chHes)
+		{
+			if(u.getWord().equals("Meter") && chHes.indexOf(u) < chHes.size()-2)
+			{
+				int nextInd = getNextIndex(u);
+				setSLL(u,chunks.get(nextInd),true);
+			}
+		}
+	}
+	
+	@Override
+	protected void preProcess(String turn, long meter)
+	{
+		super.preProcess(turn, meter);
+		addHes();
+		
+		copHes = new ChunkIU("äh nun ja");
+		copHes.groundIn(MaryAdapter.getInstance().text2IUs("äh nun ja"));
+		groundChunk(copHes);
+		
+		// Stretche dies Hes IUs weil das vorherige schon maximal gestretcht wurde
+		// (hört sich besser an)
+		for(SegmentIU i : copHes.getSegments())
+		{
+			((SysSegmentIU)i).stretchFromOriginal(maxStretch);
 		}
 	}
 	
@@ -236,7 +246,8 @@ public class SynthesisRunner extends CarSynthesisAbstract
 		}
 	}
 	
-	private void chunkIt(String name, int meterVal)
+	@Override
+	protected void chunkIt(String name, int meterVal)
 	{
 		ChunkIU commandmentChunk = new ChunkIU(name);
 		commandmentChunk.groundIn(MaryAdapter.getInstance().text2IUs(name));
